@@ -34,7 +34,7 @@ const Item = ({
 
 const Problem = () => {
   return (
-    <section className="border sticky top-20 border-neutral-100 shadow-md rounded-2xl max-w-screen-2xl mx-auto px-4 md:px-0 flex flex-col gap-2 md:gap-3 bg-gradient-to-b from-neutral-700 via-neutral-900 to-neutral-700 items-center py-24 md:py-24">
+    <section className="border md:sticky md:top-20 border-neutral-100 shadow-md md:rounded-2xl max-w-screen-2xl mx-auto px-4 md:px-0 flex flex-col gap-2 md:gap-3 bg-gradient-to-b from-neutral-700 via-neutral-900 to-neutral-700 items-center py-24 md:py-24">
       <h2 className="text-3xl lg:text-4xl text-neutral-100 w-full md:w-[22ch] text-center tracking-tight font-medium">
         The Problem
       </h2>

@@ -34,7 +34,7 @@ const Item = ({
 
 const Solution = () => {
   return (
-    <section className="border border-neutral-100 mt-24 shadow-md rounded-2xl max-w-screen-2xl mx-auto px-4 md:px-0 flex flex-col gap-2 md:gap-3 bg-gradient-to-b from-white  via-slate-100 to-white  items-center py-24 md:py-24 mb-24">
+    <section className="border border-neutral-100 mt-24 shadow-md md:rounded-2xl max-w-screen-2xl mx-auto px-4 md:px-0 flex flex-col gap-2 md:gap-3 bg-gradient-to-b from-white  via-slate-100 to-white  items-center py-24 md:py-24 mb-24">
       <h2 className="text-3xl lg:text-4xl text-neutral-800  w-full md:w-[22ch] text-center tracking-tight font-medium">
         The Lauf Solution
       </h2>

@@ -21,7 +21,9 @@ const PricingTier: React.FC<PricingOption> = ({
     <div className="flex py-16 md:py-24 flex-col h-full justify-between flex-1 items-start gap-2">
       <div className="flex flex-col w-full gap-2 items-start">
         <div className="rounded-full h-16 w-16 bg-neutral-300"></div>
-        <h4 className="font-medium text-neutral-800 mt-3 text-3xl">{name}</h4>
+        <h4 className="font-medium text-neutral-800 mt-3 text-2xl md:text-3xl">
+          {name}
+        </h4>
         <p className="w-[100%] text-lg leading-[150%] text-neutral-600">
           {description}
         </p>

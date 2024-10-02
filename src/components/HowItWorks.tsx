@@ -46,7 +46,7 @@ const HowItWorks = () => {
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="text-neutral-600 w-[42ch] leading-[150%]"
+                      className="text-neutral-600 md:w-[42ch] leading-[150%]"
                     >
                       {step.description}
                     </motion.p>
