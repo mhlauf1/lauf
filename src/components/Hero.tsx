@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="min-h-[95vh] md:min-h-screen justify-between relative w-full gap-8 flex flex-col items-center pt-16 md:pt-20  bg-gradient-to-b from-white  via-gray-100 to-white">
+    <section className="min-h-[95vh] md:min-h-screen justify-between relative w-full gap-8 flex flex-col items-center pt-12 md:pt-20  bg-gradient-to-b from-white  via-gray-100 to-white">
       <Image src="/grid-hero.png" alt="Grid" fill className="opacity-[4%]" />
       <motion.div
         className="flex items-center bg-neutral-100 bg-opacity-80 backdrop-blur-sm text-sm rounded-full py-1.5 px-2 gap-3"
