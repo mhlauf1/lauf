@@ -20,7 +20,10 @@ const Item = ({
     <div className="h-[1px] bg-neutral-300 w-full my-4"></div>
     <div className="flex flex-col gap-4 items-start">
       {listItems.map((item) => (
-        <div className="flex flex-row text-neutral-600 items-center gap-3">
+        <div
+          key={item}
+          className="flex flex-row text-neutral-600 items-center gap-3"
+        >
           <IoCheckmarkCircleOutline color="#4FAC14" size={24} />
           <p className="text-xl">{item}</p>
         </div>

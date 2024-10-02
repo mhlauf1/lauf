@@ -34,7 +34,10 @@ const PricingTier: React.FC<PricingOption> = ({
         <p className="text-neutral-600 mb-3">Includes:</p>
         <div className="flex flex-col gap-4 items-start">
           {tags.map((item) => (
-            <div className="flex flex-row text-neutral-600 items-center gap-3">
+            <div
+              key={item}
+              className="flex flex-row text-neutral-600 items-center gap-3"
+            >
               <IoCheckmarkCircleOutline color="#4FAC14" size={24} />
               <p className="text-xl">{item}</p>
             </div>
