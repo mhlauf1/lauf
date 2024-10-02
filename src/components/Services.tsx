@@ -4,7 +4,7 @@ import Image from "next/image";
 
 type ServiceProps = {
   title: string;
-  services: any;
+  services: object[];
 };
 
 const Service = ({ title, services }: ServiceProps) => (

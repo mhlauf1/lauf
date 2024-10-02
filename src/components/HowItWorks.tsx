@@ -52,8 +52,8 @@ const HowItWorks = () => {
         How it works
       </h2>
       <p className="text-lg mt-2 text-neutral-600 text-center">
-        Getting your business online with us is simple and efficient. Here's the
-        process:
+        Getting your business online with us is simple and efficient.
+        Here&apos;s the process:
       </p>
       <div className="flex w-full flex-col md:flex-row gap-12 md:gap-24 px-4 md:px-0 mt-12">
         <div className="flex flex-1 justify-center flex-col">

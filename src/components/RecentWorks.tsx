@@ -1,13 +1,13 @@
 import { IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
 import { recentWorkData } from "@/utils/data";
 
+// add image
 type WorkItemProps = {
   name: string;
-  image: string;
   tags: string[];
 };
 
-const WorkItem = ({ name, image, tags }: WorkItemProps) => (
+const WorkItem = ({ name, tags }: WorkItemProps) => (
   <div className="w-auto flex gap-3  flex-col">
     <div className="h-[500px] rounded-lg md:w-[1000px] bg-neutral-200"></div>
     <h3 className=" text-xl md:text-2xl tracking-tight mt-3 text-neutral-700">
@@ -35,7 +35,7 @@ const RecentWorks = () => {
       </div>
       <div className="px-4 md:px-0 md:pl-20 pt-4 flex flex-col md:flex-row items-row gap-12 md:gap-3">
         {recentWorkData.map((item) => (
-          <WorkItem name={item.name} tags={item.tags} image="string" />
+          <WorkItem name={item.name} tags={item.tags} />
         ))}
       </div>
     </section>
