@@ -14,9 +14,7 @@ interface PricingOption {
   isPopular: boolean;
 }
 
-interface PricingTierProps extends PricingOption {}
-
-const PricingTier: React.FC<PricingTierProps> = ({
+const PricingTier: React.FC<PricingOption> = ({
   title,
   price,
   features,
