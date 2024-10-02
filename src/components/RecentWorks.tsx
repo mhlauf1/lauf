@@ -15,7 +15,10 @@ const WorkItem = ({ name, tags }: WorkItemProps) => (
     </h3>
     <div className="flex flex-row gap-2 flex-wrap md:w-1/2">
       {tags.map((tag) => (
-        <span className="border border-neutral-100 bg-gradient-to-r from-white  via-neutral-50 to-white rounded-full py-1.5 md:py-2 px-3 md:px-4 text-sm text-neutral-600">
+        <span
+          key={tag}
+          className="border border-neutral-100 bg-gradient-to-r from-white  via-neutral-50 to-white rounded-full py-1.5 md:py-2 px-3 md:px-4 text-sm text-neutral-600"
+        >
           {tag}
         </span>
       ))}
