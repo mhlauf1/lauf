@@ -16,12 +16,7 @@ export default function Home() {
       <TextBanner />
       <Services />
       <Playgorund />
-      <div className="relative">
-        <Problem />
-        <div className="relative z-10">
-          <Solution />
-        </div>
-      </div>
+      <Solution />
       <HowItWorks />
       <Pricing />
     </main>
