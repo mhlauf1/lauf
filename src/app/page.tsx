@@ -3,7 +3,6 @@ import RecentWorks from "@/components/RecentWorks";
 import TextBanner from "@/components/TextBanner";
 import Services from "@/components/Services";
 import Playgorund from "@/components/Playground";
-import Problem from "@/components/Problem";
 import Solution from "@/components/Solution";
 import HowItWorks from "@/components/HowItWorks";
 import Pricing from "@/components/Pricing";
