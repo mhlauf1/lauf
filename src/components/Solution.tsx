@@ -1,6 +1,6 @@
 import React from "react";
 import { solutionData } from "@/utils/data";
-import { IoCheckmarkCircleOutline } from "react-icons/io5";
+import { IoCheckmarkOutline } from "react-icons/io5";
 
 const Item = ({
   title,
@@ -24,7 +24,7 @@ const Item = ({
           key={item}
           className="flex flex-row text-neutral-600 items-center gap-3"
         >
-          <IoCheckmarkCircleOutline color="#4FAC14" size={24} />
+          <IoCheckmarkOutline color="#4FAC14" size={24} />
           <p className="text-xl">{item}</p>
         </div>
       ))}

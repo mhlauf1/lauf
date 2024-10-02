@@ -1,6 +1,6 @@
 import React from "react";
 import { problemData } from "@/utils/data";
-import { IoMdCloseCircleOutline } from "react-icons/io";
+import { IoMdClose } from "react-icons/io";
 
 const Item = ({
   title,
@@ -24,7 +24,7 @@ const Item = ({
           key={index}
           className="flex flex-row text-neutral-200 items-center gap-3"
         >
-          <IoMdCloseCircleOutline size={24} />
+          <IoMdClose size={24} />
           <p className="text-xl">{item}</p>
         </div>
       ))}
