@@ -15,7 +15,7 @@ type ServiceDataProps = {
 
 const Service = ({ title, services }: ServiceProps) => (
   <div className="flex flex-col items-start gap-1">
-    <h3 className="tracking-tight  text-xl">{title}</h3>
+    <h3 className="tracking-tight font-semibold text-2xl">{title}</h3>
     <div className="grid grid-cols-1 md:grid-col-2 gap-6 lg:grid-cols-3">
       {services.map((item) => (
         <div key={item.id} className=" gap-1 flex flex-col items-start">
@@ -38,11 +38,11 @@ const Services = () => {
       <h2 className="text-2xl md:text-3xl lg:text-4xl tracking-tight font-medium">
         Services
       </h2>
-      <p className="text-lg  text-neutral-600">
+      {/* <p className="text-lg  text-neutral-600">
         Powerful solutions, driving results.
-      </p>
+      </p> */}
 
-      <div className="flex flex-col mt-8 gap-16">
+      <div className="flex flex-col mt-16 gap-16">
         <Service title={devData.title} services={devData.services} />
         <Service title={designData.title} services={designData.services} />
         <Service title={contentData.title} services={contentData.services} />

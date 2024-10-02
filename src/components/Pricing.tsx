@@ -11,83 +11,50 @@ interface PricingOption {
   title: string;
   price: number;
   features: Feature[];
-  isPopular: boolean;
 }
 
-const PricingTier: React.FC<PricingOption> = ({
-  title,
-  price,
-  features,
-  isPopular,
-}) => {
-  const [isHovered, setIsHovered] = useState<boolean>(false);
-
+const PricingTier: React.FC<PricingOption> = ({ title, price, features }) => {
   return (
-    <motion.div
-      className={`flex flex-col items-stretch bg-white border border-neutral-200 rounded-xl shadow-lg overflow-hidden transition-all duration-300 ${
-        isPopular ? "md:-mt-4 md:mb-4" : ""
-      } ${isHovered ? "transform md:scale-105" : ""}`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      initial={{ y: 50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      {isPopular && (
-        <div className="bg-neutral-800 text-white w-full py-3 text-center text-sm font-semibold uppercase tracking-wider">
-          Most Popular
-        </div>
-      )}
-      <div
-        className={`px-8 ${
-          isPopular ? "py-12" : "py-16"
-        }  flex flex-col items-center flex-grow w-full`}
+    <div className="bg-white rounded-xl border border-gray-200 p-6 flex flex-col">
+      <h3 className="text-lg tracking-tight mb-8">{title}</h3>
+      <div className="text-sm text-gray-500 mb-2">Starting at</div>
+      <div className="text-4xl font-medium tracking-tight mb-8">${price}</div>
+      <ul className="flex-grow">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center mb-2">
+            <svg
+              className="w-4 h-4 mr-2 text-green-500"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fillRule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clipRule="evenodd"
+              />
+            </svg>
+            <span className="text-neutral-700">{feature.text}</span>
+          </li>
+        ))}
+      </ul>
+      <button
+        className={` w-full py-4 px-4 rounded-lg mt-4 ${
+          title === "Pro"
+            ? "bg-black text-white"
+            : "bg-white border border-black text-black"
+        }`}
       >
-        <h3 className="text-2xl tracking-tight text-neutral-800 font-medium mb-6">
-          {title}
-        </h3>
-        <div className="text-5xl font-semibold  text-neutral-800 tracking-tight mb-8">
-          ${price}
-        </div>
-        <ul className="text-left w-full mb-8 flex-grow">
-          {features.map((feature, index) => (
-            <li key={index} className="flex items-center mb-4">
-              <svg
-                className="w-5 h-5 mr-3 text-neutral-700"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span className="text-neutral-700 text-lg">{feature.text}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="w-full p-8 ">
-        <button
-          className={`w-full py-4 px-6 rounded-xl font-medium text-lg transition-colors duration-200 ${
-            isPopular
-              ? "bg-neutral-800 text-white hover:bg-neutral-800"
-              : "bg-white border border-neutral-800 text-neutral-800 hover:bg-neutral-100"
-          }`}
-        >
-          Secure your Oct Spot
-        </button>
-      </div>
-    </motion.div>
+        Secure your Oct Spot
+      </button>
+    </div>
   );
 };
 
 const Pricing: React.FC = () => {
   const pricingOptions: PricingOption[] = [
     {
-      title: "Just Design",
-      price: 1500,
+      title: "Design",
+      price: 1000,
       features: [
         { text: "Custom Website Design" },
         { text: "Responsive Layout" },
@@ -95,7 +62,6 @@ const Pricing: React.FC = () => {
         { text: "Design Files Included" },
         { text: "SEO-Friendly Structure" },
       ],
-      isPopular: false,
     },
     {
       title: "Design & Development",
@@ -107,7 +73,6 @@ const Pricing: React.FC = () => {
         { text: "Basic SEO Optimization" },
         { text: "1 Month of Support" },
       ],
-      isPopular: true,
     },
     {
       title: "Full Stack Solution",
@@ -120,13 +85,17 @@ const Pricing: React.FC = () => {
         { text: "Custom Forms & CRUD Operations" },
         { text: "3 Months of Support" },
       ],
-      isPopular: false,
     },
   ];
 
   return (
     <section className="relative bg-gradient-to-b from-white  flex flex-col items-center via-gray-100 to-white py-24 px-4 md:px-20">
-      <Image src="/grid-hero.png" alt="Grid" fill className="opacity-[4%]" />
+      <Image
+        src="/grid-hero.png"
+        alt="Grid"
+        fill
+        className="opacity-[4%] -z-1"
+      />
 
       <h2 className="text-3xl lg:text-4xl  w-full md:w-[20ch] text-center tracking-tight font-medium mb-6">
         Pricing Tailored to Your Needs

@@ -141,3 +141,36 @@ export const playgroundData = [
         title: "Nexum"
     },
 ]
+
+export const howItWorksSteps = [
+    {
+        title: "Discovery & Strategy",
+        description:
+            "We start by understanding your goals, target audience, and business challenges to create a custom plan.",
+        image: "/images/step1.jpg",
+    },
+    {
+        title: "Design That Captivates",
+        description:
+            "Our designers create a visually stunning and user-friendly interface tailored to your brand.",
+        image: "/images/step2.jpg",
+    },
+    {
+        title: "Seamless Development",
+        description:
+            "Our developers bring the design to life, ensuring a smooth and responsive user experience.",
+        image: "/images/step3.jpg",
+    },
+    {
+        title: "Testing & Optimization",
+        description:
+            "We rigorously test and refine your website to ensure it performs flawlessly across all devices.",
+        image: "/images/step4.jpg",
+    },
+    {
+        title: "Launch & Grow",
+        description:
+            "We launch your site and provide ongoing support to help your online presence thrive.",
+        image: "/images/step5.jpg",
+    },
+];
