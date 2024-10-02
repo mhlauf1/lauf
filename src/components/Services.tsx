@@ -4,14 +4,20 @@ import Image from "next/image";
 
 type ServiceProps = {
   title: string;
-  services: object[];
+  services: ServiceDataProps[];
+};
+
+type ServiceDataProps = {
+  id: number;
+  title: string;
+  description: string;
 };
 
 const Service = ({ title, services }: ServiceProps) => (
   <div className="flex flex-col items-start gap-1">
     <h3 className="tracking-tight  text-xl">{title}</h3>
     <div className="grid grid-cols-1 md:grid-col-2 gap-6 lg:grid-cols-3">
-      {services.map((item: any) => (
+      {services.map((item) => (
         <div key={item.id} className=" gap-1 flex flex-col items-start">
           <h4 className="font-medium  text-neutral-700  text-lg mt-4">
             {item.title}

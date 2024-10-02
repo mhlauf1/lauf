@@ -35,7 +35,9 @@ const RecentWorks = () => {
       </div>
       <div className="px-4 md:px-0 md:pl-20 pt-4 flex flex-col md:flex-row items-row gap-12 md:gap-3">
         {recentWorkData.map((item) => (
-          <WorkItem name={item.name} tags={item.tags} />
+          <div key={item.id}>
+            <WorkItem name={item.name} tags={item.tags} />
+          </div>
         ))}
       </div>
     </section>
