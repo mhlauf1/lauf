@@ -3,8 +3,26 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const PricingTier = ({ title, price, features, isPopular }) => {
-  const [isHovered, setIsHovered] = useState(false);
+interface Feature {
+  text: string;
+}
+
+interface PricingOption {
+  title: string;
+  price: number;
+  features: Feature[];
+  isPopular: boolean;
+}
+
+interface PricingTierProps extends PricingOption {}
+
+const PricingTier: React.FC<PricingTierProps> = ({
+  title,
+  price,
+  features,
+  isPopular,
+}) => {
+  const [isHovered, setIsHovered] = useState<boolean>(false);
 
   return (
     <motion.div
@@ -47,7 +65,7 @@ const PricingTier = ({ title, price, features, isPopular }) => {
                   clipRule="evenodd"
                 />
               </svg>
-              <span className="text-neutral-700 text-lg">{feature}</span>
+              <span className="text-neutral-700 text-lg">{feature.text}</span>
             </li>
           ))}
         </ul>
@@ -67,17 +85,17 @@ const PricingTier = ({ title, price, features, isPopular }) => {
   );
 };
 
-const Pricing = () => {
-  const pricingOptions = [
+const Pricing: React.FC = () => {
+  const pricingOptions: PricingOption[] = [
     {
       title: "Just Design",
       price: 1500,
       features: [
-        "Custom Website Design",
-        "Responsive Layout",
-        "5 Design Revisions",
-        "Design Files Included",
-        "SEO-Friendly Structure",
+        { text: "Custom Website Design" },
+        { text: "Responsive Layout" },
+        { text: "5 Design Revisions" },
+        { text: "Design Files Included" },
+        { text: "SEO-Friendly Structure" },
       ],
       isPopular: false,
     },
@@ -85,11 +103,11 @@ const Pricing = () => {
       title: "Design & Development",
       price: 3000,
       features: [
-        "Everything in Just Design",
-        "Frontend Development",
-        "CMS Integration",
-        "Basic SEO Optimization",
-        "1 Month of Support",
+        { text: "Everything in Just Design" },
+        { text: "Frontend Development" },
+        { text: "CMS Integration" },
+        { text: "Basic SEO Optimization" },
+        { text: "1 Month of Support" },
       ],
       isPopular: true,
     },
@@ -97,12 +115,12 @@ const Pricing = () => {
       title: "Full Stack Solution",
       price: 5000,
       features: [
-        "Everything in Design & Development",
-        "Backend Development",
-        "Database Integration",
-        "User Authentication",
-        "Custom Forms & CRUD Operations",
-        "3 Months of Support",
+        { text: "Everything in Design & Development" },
+        { text: "Backend Development" },
+        { text: "Database Integration" },
+        { text: "User Authentication" },
+        { text: "Custom Forms & CRUD Operations" },
+        { text: "3 Months of Support" },
       ],
       isPopular: false,
     },
