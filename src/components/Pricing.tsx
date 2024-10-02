@@ -1,48 +1,47 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-
-interface Feature {
-  text: string;
-}
+import { pricingData } from "@/utils/data";
+import { IoCheckmarkCircleOutline } from "react-icons/io5";
 
 interface PricingOption {
-  title: string;
+  name: string;
   price: number;
-  features: Feature[];
+  description: string;
+  tags: string[];
 }
 
-const PricingTier: React.FC<PricingOption> = ({ title, price, features }) => {
+const PricingTier: React.FC<PricingOption> = ({
+  name,
+  price,
+  tags,
+  description,
+}) => {
   return (
-    <div className="bg-white rounded-xl border border-gray-200 p-6 flex flex-col">
-      <h3 className="text-lg tracking-tight mb-8">{title}</h3>
-      <div className="text-sm text-gray-500 mb-2">Starting at</div>
-      <div className="text-4xl font-medium tracking-tight mb-8">${price}</div>
-      <ul className="flex-grow">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center mb-2">
-            <svg
-              className="w-4 h-4 mr-2 text-green-500"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fillRule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clipRule="evenodd"
-              />
-            </svg>
-            <span className="text-neutral-700">{feature.text}</span>
-          </li>
-        ))}
-      </ul>
-      <button
-        className={` w-full py-4 px-4 rounded-lg mt-4 ${
-          title === "Pro"
-            ? "bg-black text-white"
-            : "bg-white border border-black text-black"
-        }`}
-      >
+    <div className="flex py-16 md:py-24 flex-col h-full justify-between flex-1 items-start gap-2">
+      <div className="flex flex-col w-full gap-2 items-start">
+        <div className="rounded-full h-16 w-16 bg-neutral-300"></div>
+        <h4 className="font-medium text-neutral-800 mt-3 text-3xl">{name}</h4>
+        <p className="w-[100%] text-lg leading-[150%] text-neutral-600">
+          {description}
+        </p>
+        <p className="text-sm  mt-6">
+          <span className="text-2xl text-neutral-700 tracking-tight">
+            Starting at ${price}
+          </span>
+        </p>
+        <div className="h-[1px] w-full bg-neutral-200 my-3"></div>
+        <p className="text-neutral-600 mb-3">Includes:</p>
+        <div className="flex flex-col gap-4 items-start">
+          {tags.map((item) => (
+            <div className="flex flex-row text-neutral-600 items-center gap-3">
+              <IoCheckmarkCircleOutline color="#4FAC14" size={24} />
+              <p className="text-xl">{item}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <button className="w-full mt-12 border py-4 rounded-lg  bg-gradient-to-b from-white   to-neutral-50  border-neutral-200">
         Secure your Oct Spot
       </button>
     </div>
@@ -50,62 +49,32 @@ const PricingTier: React.FC<PricingOption> = ({ title, price, features }) => {
 };
 
 const Pricing: React.FC = () => {
-  const pricingOptions: PricingOption[] = [
-    {
-      title: "Design",
-      price: 1000,
-      features: [
-        { text: "Custom Website Design" },
-        { text: "Responsive Layout" },
-        { text: "5 Design Revisions" },
-        { text: "Design Files Included" },
-        { text: "SEO-Friendly Structure" },
-      ],
-    },
-    {
-      title: "Design & Development",
-      price: 3000,
-      features: [
-        { text: "Everything in Just Design" },
-        { text: "Frontend Development" },
-        { text: "CMS Integration" },
-        { text: "Basic SEO Optimization" },
-        { text: "1 Month of Support" },
-      ],
-    },
-    {
-      title: "Full Stack Solution",
-      price: 5000,
-      features: [
-        { text: "Everything in Design & Development" },
-        { text: "Backend Development" },
-        { text: "Database Integration" },
-        { text: "User Authentication" },
-        { text: "Custom Forms & CRUD Operations" },
-        { text: "3 Months of Support" },
-      ],
-    },
-  ];
-
   return (
-    <section className="relative bg-gradient-to-b from-white  flex flex-col items-center via-gray-100 to-white py-24 px-4 md:px-20">
+    <section className="relative  flex flex-col items-center bg-gradient-to-b from-white  via-slate-100 to-white   py-24 px-4 md:px-20">
       <Image
         src="/grid-hero.png"
         alt="Grid"
         fill
-        className="opacity-[4%] -z-1"
+        className="opacity-[4%] -z-10"
       />
 
       <h2 className="text-3xl lg:text-4xl  w-full md:w-[20ch] text-center tracking-tight font-medium mb-6">
         Pricing Tailored to Your Needs
       </h2>
-      <p className="text-xl text-center text-neutral-600 mb-16 md:w-[42ch] mx-auto">
+      <p className="text-xl text-center text-neutral-600 mb-12 md:mb-16 md:w-[42ch] mx-auto">
         Flexible packages designed to fit your business and budget, with no
         hidden fees—just results.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 mt-8 w-full gap-8 md:gap-4">
-        {pricingOptions.map((option, index) => (
-          <PricingTier key={index} {...option} />
+      <div className="grid border px-8 md:px-20 border-neutral-200 rounded-2xl bg-gradient-to-b from-white  via-slate-50 to-white shadow-md grid-cols-1 md:grid-cols-3  w-full gap-8 md:gap-8">
+        {pricingData.map((option) => (
+          <div key={option.id}>
+            <PricingTier
+              name={option.name}
+              price={option.price}
+              description={option.description}
+              tags={option.tags}
+            />
+          </div>
         ))}
       </div>
     </section>

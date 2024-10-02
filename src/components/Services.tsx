@@ -33,7 +33,7 @@ const Service = ({ title, services }: ServiceProps) => (
 
 const Services = () => {
   return (
-    <section className="max-w-screen-xl relative mx-auto px-4 md:px-8 flex flex-col gap-2 md:gap-3 items-start md:items-center py-16 md:py-24 w-full">
+    <section className="max-w-screen-xl relative mx-auto px-4 md:px-0 flex flex-col gap-2 md:gap-3 items-start md:items-center py-16 md:py-24 w-full">
       <Image src="/grid-hero.png" alt="Grid" fill className="opacity-[4%]" />
       <h2 className="text-2xl md:text-3xl lg:text-4xl tracking-tight font-medium">
         Services

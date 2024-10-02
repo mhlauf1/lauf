@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+// import { Head } from "next/document";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -26,6 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {/* <Head>
+        <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+      </Head> */}
       <body
         className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden antialiased`}
       >

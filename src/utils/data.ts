@@ -174,3 +174,68 @@ export const howItWorksSteps = [
         image: "/images/step5.jpg",
     },
 ];
+
+export const problemData = [
+    {
+        id: 1,
+        name: "One-Size-Fits-All Design",
+        description: "Generic designs that don't reflect your brand.",
+        tags: ["No personalization", "Lack of brand identity", "Dated templates", "Overused layouts", "Forgettable experience",]
+    },
+    {
+        id: 2,
+        name: "Confusing User Experience",
+        description: "Poor navigation frustrates and loses users.",
+        tags: ["Hard-to-find info", "Clunky navigation", "Slow page load times", "Unintuitive layout", "High bounce rate"]
+    },
+    {
+        id: 3,
+        name: "Limited Functionality",
+        description: "Rigid websites that stifle growth.",
+        tags: ["Outdated features", "No scalability", "Incompatible plugins", "Mobile issues", "Difficult to update",]
+    },
+];
+
+export const solutionData = [
+    {
+        id: 1,
+        name: "Tailored for Your Business",
+        description: "Custom designs that align with your goals.",
+        tags: ["Unique brand identity", "Creative, structured layouts", "Goal-driven design", "Personalized user experience", "Strategic visual impact",]
+    },
+    {
+        id: 2,
+        name: "Built for the Future",
+        description: "Optimized for any device and ready to grow.",
+        tags: ["Mobile-first design", "Scalable architecture", "Cross-device compatibility", "Adaptive to trends", "Future-proof features"]
+    },
+    {
+        id: 3,
+        name: "Fast & Ongoing Support",
+        description: "Reliable service with continuous care.",
+        tags: ["Quick loading speeds", "Proactive maintenance", "Regular updates", "Hands-on support", "Long-term partnership",]
+    },
+];
+export const pricingData = [
+    {
+        id: 1,
+        name: "Design",
+        price: 1000,
+        description: "High quality, result driven website designs",
+        tags: ["Custom Website Design", "Responsive Layouts", "5 Design Revisions", "Design Files Included", "SEO-Friendly Structure", "Figma Prototypes",]
+    },
+    {
+        id: 2,
+        name: "Design & Development",
+        price: 3000,
+        description: "Expert design and development",
+        tags: ["Everything in Design", "Frontend Development", "CMS Integration", "SEO Optimization", "Advance Tech Stack", "1 Month of Support"]
+    },
+    {
+        id: 3,
+        name: "Full Stack Solutions",
+        description: "Build full scale websites with ease",
+        price: 5000,
+        tags: ["Everything in Design & Development", "Backend Development", "User Authentication", "Custom Forms & CRUD Operations", "3 Months of Support", "Backend Development", "User Authentication",]
+    },
+];

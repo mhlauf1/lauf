@@ -17,7 +17,7 @@ const PlaygorundItem = ({ name }: PlaygroundItemProps) => (
 
 const Playgorund = () => {
   return (
-    <section className="flex flex-col w-full py-16 md:py-24">
+    <section className="flex flex-col w-full pt-16 md:pt-24 pb-24 md:pb-32">
       <div className="px-4 md:px-0 md:pl-20 flex flex-col md:flex-row items-row gap-6 md:gap-3">
         {playgroundData.map((item) => (
           <div key={item.id}>
@@ -34,11 +34,11 @@ const Playgorund = () => {
           <FaCircle size={8} color="lightgrey" />
         </div>
         <div className="flex items-center flex-row gap-3">
-          <div className="p-4 border border-neutral-300 rounded-lg">
-            <IoMdArrowBack size={24} />
+          <div className="p-2 border border-neutral-200 rounded-lg">
+            <IoMdArrowBack size={24} color="grey" />
           </div>
-          <div className="p-4 border border-neutral-300 rounded-lg">
-            <IoMdArrowForward size={24} />
+          <div className="p-2 border border-neutral-200 rounded-lg">
+            <IoMdArrowForward size={24} color="grey" />
           </div>
         </div>
       </div>
