@@ -1,6 +1,5 @@
 import React from "react";
 import { playgroundData } from "@/utils/data";
-import { FaCircle } from "react-icons/fa";
 
 // add image
 type PlaygroundItemProps = {

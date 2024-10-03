@@ -1,4 +1,3 @@
-import { IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
 import { recentWorkData } from "@/utils/data";
 
 // add image

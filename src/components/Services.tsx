@@ -1,6 +1,5 @@
 import React from "react";
 import { designData, devData, contentData } from "@/utils/data";
-import Image from "next/image";
 
 type ServiceProps = {
   title: string;
