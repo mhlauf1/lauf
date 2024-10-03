@@ -5,7 +5,7 @@ const TextBanner = () => {
     <div className="py-36 flex px-4 md:px-20 lg:px-36">
       <p
         style={{ lineHeight: "130%" }}
-        className="text-3xl md:text-4xl lg:text-5xl text-neutral-500 font-semibold md:w-[50ch]"
+        className="text-3xl md:text-4xl lg:text-5xl text-neutral-500 tracking-tighter md:tracking-normal font-semibold md:w-[50ch]"
       >
         <span className="text-neutral-900">
           We create websites with modern, effective design and smart
