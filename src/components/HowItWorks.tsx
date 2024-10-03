@@ -16,7 +16,7 @@ const HowItWorks = () => {
 
   return (
     <section className="px-4 md:px-20 flex flex-col gap-2 md:gap-3  items-start md:items-center py-28 md:py-48 w-full">
-      <h2 className="text-3xl lg:text-4xl w-full md:w-[20ch] text-center tracking-tight font-medium">
+      <h2 className="text-3xl lg:text-4xl w-full md:w-[20ch] text-center font-semibold">
         How it works
       </h2>
       <p className="text-lg mt-2 text-neutral-600 text-center">
@@ -36,7 +36,7 @@ const HowItWorks = () => {
                 whileHover={{ scale: 1.01 }}
                 transition={{ duration: 0.2 }}
               >
-                <h3 className="text-xl font-medium mb-2">
+                <h3 className="text-2xl font-semibold mb-2">
                   Step {index + 1}: {step.title}
                 </h3>
                 <AnimatePresence>
@@ -46,7 +46,7 @@ const HowItWorks = () => {
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="text-neutral-600 md:w-[42ch] leading-[150%]"
+                      className="text-neutral-600 md:w-[42ch] text-lg leading-[150%]"
                     >
                       {step.description}
                     </motion.p>

@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <LaufNav className="bg-white w-full z-50" shouldHideOnScroll={isDesktop}>
-      <div className=" px-4 md:px-20 flex w-full justify-between items-center py-4 mx-auto">
+      <div className=" px-4 md:px-20 lg:px-28 flex w-full justify-between items-center py-4 ">
         {/* Left side: Logo and Links */}
         <div className="flex items-center gap-8">
           <NavbarBrand>
@@ -77,10 +77,22 @@ export default function Navbar() {
         </div>
 
         {/* Right side: CTA Button */}
-        <div className="hidden md:block">
-          <button className="bg-white border rounded-lg py-2 px-3 text-sm font-medium text-neutral-800">
-            Get in touch
-          </button>
+        <div className="flex flex-row items-center gap-4">
+          <div className="flex items-center bg-neutral-100 bg-opacity-80 backdrop-blur-sm text-xs md:text-sm rounded-full py-1.5 px-2 gap-2 md:gap-3">
+            <div className="bg-neutral-900 rounded-full py-1 px-3">
+              <span className="text-neutral-100 font-semibold">
+                Now Available
+              </span>
+            </div>
+            <span className="text-neutral-600 font-semibold">
+              for October Projects 🎊
+            </span>
+          </div>
+          <div className="hidden md:block">
+            <button className="bg-white font-semibold border rounded-lg py-2 px-3 text-sm  text-neutral-800">
+              Get in touch
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu Button */}

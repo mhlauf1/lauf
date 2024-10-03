@@ -6,13 +6,15 @@ import Playgorund from "@/components/Playground";
 import Solution from "@/components/Solution";
 import HowItWorks from "@/components/HowItWorks";
 import Pricing from "@/components/Pricing";
+import FeaturedWork from "@/components/FeaturedWork";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <RecentWorks />
+      <FeaturedWork />
       <TextBanner />
+      <RecentWorks />
       <Services />
       <Playgorund />
       <Solution />

@@ -15,6 +15,19 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const montrealMedium = localFont({
+  src: "./fonts/PPNeueMontreal-Medium.otf",
+  variable: "--font-montreal-medium",
+});
+const montrealBook = localFont({
+  src: "./fonts/PPNeueMontreal-Book.otf",
+  variable: "--font-montreal-book",
+});
+const montrealBold = localFont({
+  src: "./fonts/PPNeueMontreal-Bold.otf",
+  variable: "--font-montreal-bold",
+});
+
 export const metadata: Metadata = {
   title: "Lauf",
   description: "Wesbite Design and Development",
@@ -31,7 +44,7 @@ export default function RootLayout({
         <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
       </Head> */}
       <body
-        className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${montrealMedium.className} ${montrealBook.className}  ${montrealBold.className}overflow-x-hidden antialiased`}
       >
         <Navbar />
         {children}
