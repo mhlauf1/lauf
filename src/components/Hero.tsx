@@ -8,13 +8,23 @@ const Hero = () => {
     <section className="px-4 md:px-20 lg:px-36 w-full flex flex-col pt-16 md:pt-20 bg-gradient-to-b from-white  via-neutral-50 to-white">
       <div className="flex gap-8 md:gap-0 flex-col md:items-end md:flex-row">
         <div className="flex md:flex-[2] flex-col gap-6 items-start">
+          <div className="flex md:hidden items-center bg-neutral-100 mb-2 bg-opacity-80 backdrop-blur-sm text-sm rounded-full py-1.5 px-2 gap-2 md:gap-3">
+            <div className="bg-neutral-900 rounded-full py-1 px-3">
+              <span className="text-neutral-100 font-semibold">
+                Now Available
+              </span>
+            </div>
+            <span className="text-neutral-600 font-semibold">
+              for October Projects 🎊
+            </span>
+          </div>
           <motion.h1
-            className="text-4xl md:text-7xl font-semibold tracking-tight capitalize"
+            className="text-4xl w-full md:w-[16ch] md:text-7xl font-semibold tracking-tight capitalize"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            Full-Scale Website <br />{" "}
+            Full-Scale Website{" "}
             <span className="text-neutral-500">Design & Development</span>
           </motion.h1>
         </div>

@@ -78,7 +78,7 @@ export default function Navbar() {
 
         {/* Right side: CTA Button */}
         <div className="flex flex-row items-center gap-4">
-          <div className="flex items-center bg-neutral-100 bg-opacity-80 backdrop-blur-sm text-xs md:text-sm rounded-full py-1.5 px-2 gap-2 md:gap-3">
+          <div className="md:flex hidden items-center bg-neutral-100 bg-opacity-80 backdrop-blur-sm text-xs md:text-sm rounded-full py-1.5 px-2 gap-2 md:gap-3">
             <div className="bg-neutral-900 rounded-full py-1 px-3">
               <span className="text-neutral-100 font-semibold">
                 Now Available
