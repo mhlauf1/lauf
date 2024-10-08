@@ -50,10 +50,12 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
       >
-        <button className=" bg-gradient-to-t font-semibold from-neutral-950 via-neutral-900 to-neutral-700 flex items-center gap-4 rounded-full py-4 px-8 text-white">
-          Let&apos;s work together
-          <IoIosArrowForward />
-        </button>
+        <a href="/contact">
+          <button className=" bg-gradient-to-t font-semibold from-neutral-950 via-neutral-900 to-neutral-700 flex items-center gap-4 rounded-full py-4 px-8 text-white">
+            Let&apos;s work together
+            <IoIosArrowForward />
+          </button>
+        </a>
         <span className="text-sm text-neutral-500">
           Flat rates. No commitments. Defined outcomes.
         </span>
