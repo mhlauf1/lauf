@@ -10,7 +10,7 @@ import CTA from "@/components/CTA";
 export default function Home() {
   return (
     <main>
-      <Hero />
+      {/* <Hero /> */}
       <TextBanner />
       <RecentWorks />
       <Services />
