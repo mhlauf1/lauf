@@ -1,4 +1,3 @@
-import Hero from "@/components/Hero";
 import RecentWorks from "@/components/RecentWorks";
 import TextBanner from "@/components/TextBanner";
 import Services from "@/components/Services";
@@ -10,7 +9,6 @@ import CTA from "@/components/CTA";
 export default function Home() {
   return (
     <main>
-      {/* <Hero /> */}
       <TextBanner />
       <RecentWorks />
       <Services />
