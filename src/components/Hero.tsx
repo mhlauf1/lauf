@@ -25,13 +25,19 @@ const Hero = () => {
             Available for October Projects
           </span>
         </div>
-        <h1 className="text-4xl md:text-7xl font-semibold tracking-tighter text-center capitalize">
+        <h1 className="text-4xl md:text-7xl font-semibold tracking-tight text-center capitalize">
           Full-Scale Website <br /> Design & Development
         </h1>
 
-        <p className="w-full max-w-[64ch] mt-3 px-4 leading-6 text-md md:text-xl text-neutral-600 text-center">
+        <p className="w-full hidden md:block max-w-[64ch] mt-3 px-4 leading-6 text-md md:text-xl text-neutral-600 text-center">
           <span className="font-semibold">
             Husband-wife team building custom websites <br />
+          </span>{" "}
+          designed to elevate your brand and grow your business.
+        </p>
+        <p className="w-full block md:hidden max-w-[64ch] mt-3 px-4 leading-6 text-md md:text-xl text-neutral-600 text-center">
+          <span className="font-semibold">
+            Husband-wife team building custom websites
           </span>{" "}
           designed to elevate your brand and grow your business.
         </p>

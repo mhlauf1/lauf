@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-row items-center justify-between w-full py-16 px-4 md:px-20 lg:px-36">
-      <div className="flex flex-1">
+    <footer className="flex md:flex-row flex-col items-center justify-between w-full py-12 md:py-16 px-4 md:px-20 lg:px-36">
+      <div className="md:flex hidden flex-1">
         <div className="h-auto w-[56px]">
           <Image
             src="/black-text.png"
@@ -18,7 +18,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <ul className="flex flex-1 justify-center items-center gap-6">
+      <ul className="flex flex-1  my-8 md:my-0  justify-center flex-col md:flex-row items-center gap-6">
         <li>
           <Link href="#work">Work</Link>
         </li>
@@ -32,6 +32,18 @@ const Footer = () => {
           <Link href="#pricng">Pricing</Link>
         </li>
       </ul>
+      <div className="md:hidden flex mb-6  flex-1">
+        <div className="h-auto w-[42px]">
+          <Image
+            src="/black-text.png"
+            alt="Brady Digital Consulting Logo"
+            layout="responsive"
+            width={56}
+            height={40}
+            objectFit="cover"
+          />
+        </div>
+      </div>
       <div className="flex justify-end flex-1">
         <p>@Lauf Co. All rights reserved</p>
       </div>

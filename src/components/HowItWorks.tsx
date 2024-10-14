@@ -49,16 +49,16 @@ const HowItWorks = () => {
         >
           How it works
         </h3>
-        <p className="mt-2 text-lg w-[42ch] text-center text-neutral-600">
+        <p className="mt-2 text-lg md:w-[42ch] text-center text-neutral-600">
           Getting your business online with us is simple and efficient.
           Here&apos;s the process:
         </p>
       </motion.div>
-      <div className="flex flex-col mt-4 rounded-xl py-28 px-4 md:px-36 md:flex-row gap-16">
+      <div className="flex flex-col rounded-xl py-16 md:py-28 px-4 md:px-36 md:flex-row gap-16">
         <motion.div
           ref={stepsRef}
           {...stepsAnimationProps}
-          className="flex w-full flex-1 mt-8 md:mt-0 flex-col md:flex-row gap-12"
+          className="flex w-full flex-1 flex-col md:flex-row gap-12"
         >
           <div className="flex flex-1 flex-col gap-8">
             {howItWorksSteps.map((step, index) => (

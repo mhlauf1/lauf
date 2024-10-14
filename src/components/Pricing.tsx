@@ -34,7 +34,7 @@ const PricingTier: React.FC<PricingOption & { delay: number }> = ({
       ref={ref}
       {...animationProps}
       whileHover={{ scale: 1.01, opacity: 1 }}
-      className={`flex flex-col h-full border shadow-md rounded-2xl px-8 py-12 justify-between flex-1 items-start gap-2 ${
+      className={`flex flex-col h-full border shadow-md rounded-2xl px-6 md:px-8 py-12 justify-between flex-1 items-start gap-2 ${
         featured ? "bg-neutral-950" : ""
       }`}
     >
@@ -120,12 +120,12 @@ const Pricing: React.FC = () => {
         >
           Pricing Tailored to Your Needs
         </h3>
-        <p className="mt-4 text-lg w-[38ch] text-neutral-600">
+        <p className="mt-4 text-lg md:w-[38ch] text-neutral-600">
           Flexible packages designed to fit your business and budget, with no
           hidden fees—just results.
         </p>
       </motion.div>
-      <div className="flex flex-col md:flex-row mt-16 w-full gap-8 md:gap-4">
+      <div className="flex flex-col px-4 md:flex-row mt-16 w-full gap-8 md:gap-4">
         {pricingData.map((option, index) => (
           <div className="flex flex-1" key={option.id}>
             <PricingTier

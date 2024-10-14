@@ -65,11 +65,11 @@ const Playground: React.FC = () => {
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-800">
           More works
         </h2>
-        <p className="mt-2 text-lg text-neutral-600">
+        <p className="mt-2 text-lg w-[75%] text-neutral-600">
           Explore our creative experiments and side projects.
         </p>
       </motion.div>
-      <div className="px-4 md:px-0 w-full flex-1 flex flex-col md:flex-row items-row gap-6 md:gap-3">
+      <div className="px-0 w-full flex-1 flex flex-col md:flex-row items-row gap-6 md:gap-3">
         {playgroundData.map((item, index) => (
           <div className="w-full" key={item.id}>
             <PlaygroundItem

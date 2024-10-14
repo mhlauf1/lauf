@@ -57,7 +57,9 @@ const WorkItem = ({ name, tags, delay, video, screenshots }: WorkItemProps) => {
         <div className="w-full md:w-1/3 aspect-video rounded-lg overflow-hidden shadow-md">
           <video
             src={video}
+            controls={false}
             autoPlay
+            playsInline
             muted
             loop
             className="w-full h-full object-cover "

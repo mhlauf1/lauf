@@ -1,6 +1,8 @@
 "use client";
 import React, { useRef, useEffect } from "react";
 import Image from "next/image";
+import useIsDesktop from "@/hooks/useIsDesktop"; // Adjust the path based on your project structure
+
 import {
   motion,
   useAnimationFrame,
@@ -13,7 +15,9 @@ interface HeroCarouselProps {
 }
 
 const HeroCarousel: React.FC<HeroCarouselProps> = ({ images }) => {
-  const baseVelocity = -2.5; // Adjust this value to change the speed
+  const isDesktop = useIsDesktop(); // Determine if the screen is desktop size
+
+  const baseVelocity = isDesktop ? -2.5 : -6.5; // Adjust this value to change the speed
   const baseX = useMotionValue(0);
   const x = useTransform(baseX, (v) => `${v}%`);
   const containerRef = useRef<HTMLDivElement>(null);
