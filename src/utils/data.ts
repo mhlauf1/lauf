@@ -2,20 +2,26 @@ export const recentWorkData = [
     {
         id: 1,
         name: "Cadence Private Capital",
-        image: "",
-        tags: ["Web Design", "Web Development", "Content Creation", "SEO", "Hosting",]
+        tags: ["Web Design", "Web Development", "Content Creation", "SEO", "Hosting",],
+        video: "/brady-home.mov",
+        screenshots: ["/brady-1.png", "/brady-2.png", "/brady-3.png", "/brady-4.png", "/brady-5.png",]
     },
     {
         id: 2,
         name: "Brady Digital Consulting",
-        image: "",
-        tags: ["Web Design", "Web Development", "Content Creation", "Asset Creation", "SEO", "Hosting",]
+        tags: ["Web Design", "Web Development", "Content Creation", "Asset Creation", "SEO", "Hosting"],
+        video: "/brady-home.mov",
+        screenshots: ["/brady-1.png", "/brady-2.png", "/brady-3.png", "/brady-4.png", "/brady-5.png",]
+
+
     },
     {
         id: 3,
         name: "Clare and Mike Wedding",
-        image: "",
-        tags: ["Web Design", "Web Development", "Content Creation", "Form Collection", "Hosting",]
+        tags: ["Web Design", "Web Development", "Content Creation", "Form Collection", "Hosting"],
+        video: "/brady-home.mov",
+        screenshots: ["/brady-1.png", "/brady-2.png", "/brady-3.png", "/brady-4.png", "/brady-5.png",]
+
     },
 ];
 
@@ -100,51 +106,40 @@ export const contentData = {
 export const playgroundData = [
     {
         id: 0,
-        image: "",
-        title: "Nexum"
+        image: "/full-1.png",
+        title: "UpCloud"
     },
     {
         id: 1,
-        image: "",
-        title: "Nexum"
-    },
-    {
-        id: 2,
-        image: "",
-        title: "Nexum"
+        image: "/full-2.png",
+        title: "Clarity"
     },
 ]
 
 export const howItWorksSteps = [
     {
-        title: "Discovery & Strategy",
+        title: "Step 1: Discovery & Strategy Call",
         description:
-            "We start by understanding your goals, target audience, and business challenges to create a custom plan.",
-        image: "/images/step1.jpg",
+            "Fill out our intake form, then we connect for a strategy call to discuss your goals, challenges, and how a website can solve them. Together, we create a clear plan for success.",
+        image: "/brady-1.png",
     },
     {
-        title: "Design That Captivates",
+        title: "Step 2: Custom Design Solution",
         description:
-            "Our designers create a visually stunning and user-friendly interface tailored to your brand.",
-        image: "/images/step2.jpg",
+            "We design a website tailored to your business needs and goals, focusing on both aesthetics and functionality to ensure it captures attention and drives results.",
+        image: "/brady-1.png",
     },
     {
-        title: "Seamless Development",
+        title: "Step 3: Development & Build",
         description:
-            "Our developers bring the design to life, ensuring a smooth and responsive user experience.",
-        image: "/images/step3.jpg",
+            "Once the design is approved, we bring it to life with a fully functional website, ensuring smooth performance, responsiveness, and scalability.",
+        image: "/brady-1.png",
     },
     {
-        title: "Testing & Optimization",
+        title: "Step 4: Launch & Ongoing Support",
         description:
-            "We rigorously test and refine your website to ensure it performs flawlessly across all devices.",
-        image: "/images/step4.jpg",
-    },
-    {
-        title: "Launch & Grow",
-        description:
-            "We launch your site and provide ongoing support to help your online presence thrive.",
-        image: "/images/step5.jpg",
+            "After testing and optimizing your site, we launch it and provide ongoing updates, monitoring, and maintenance to keep your website performing at its best.",
+        image: "/brady-1.png",
     },
 ];
 
@@ -194,21 +189,57 @@ export const pricingData = [
         id: 1,
         name: "Design",
         price: 1000,
-        description: "High quality, result driven website designs",
-        tags: ["Custom Website Design", "Responsive Layouts", "5 Design Revisions", "Design Files Included", "SEO-Friendly Structure", "Figma Prototypes",]
+        featured: false,
+        description: "Perfect for businesses that only need a professional design.",
+        tags: ["Custom Website Design", "Responsive Layouts Across Devices", "SEO-Optimized Design Structure", "Figma Prototypes for Preview", "Unlimited Design Revisions",]
     },
     {
         id: 2,
         name: "Design & Development",
         price: 3000,
-        description: "Expert design and development",
-        tags: ["Everything in Design", "Frontend Development", "CMS Integration", "SEO Optimization", "Advance Tech Stack", "1 Month of Support"]
+        featured: true,
+        description: "Our top option for fast, functional websites.",
+        tags: ["Everything in the Design Package", "Custom Frontend Development", "Accessibility + Performance Optimization", "CMS Integration for Easy Content Updates", "Advance Tech Stack + SEO Integration"]
     },
     {
         id: 3,
         name: "Full Stack Solutions",
-        description: "Build full scale websites with ease",
+        featured: false,
+        description: "For robust websites with advanced features and interactivity.",
         price: 5000,
-        tags: ["Everything in Design & Development", "Backend Development", "User Authentication", "Custom Forms & CRUD Operations", "3 Months of Support", "Backend Development", "User Authentication",]
+        tags: ["Everything in the Design & Development Package", "Backend Development for Custom Features", "Database Integration for Managing Data", "User Authentication & Secure Logins", "Custom Forms and CRUD Operations"]
     },
+];
+
+export const serviceData = [
+    {
+        id: 1,
+        name: "Website Design",
+        image: "/web-design.png",
+        tags: ["Website Design", "Mobile Responsive", "Interactice Animations", "Figma Prototypes", "Copywriting", "Asset Creation", "Content Creation",]
+    },
+    {
+        id: 2,
+        name: "Website Developent",
+        image: "/web-dev.png",
+        tags: ["Full Scale Websites", "Landing Pages", "App Integrations & APIs", "Forms & Data Collection", "SEO Optimization", "Hosting Solutions", "Analytics",]
+    },
+];
+
+
+export const heroImages = [
+    "/design-7.png",
+    "/design-4.png",
+    "/design-8.png",
+    "/design-9.png",
+    "/design-1.png",
+    "/design-11.png",
+    "/design-12.png",
+    "/design-2.png",
+    "/design-3.png",
+    "/design-13.png",
+    "/design-14.png",
+    "/design-15.png",
+    "/design-5.png",
+    "/design-6.png",
 ];

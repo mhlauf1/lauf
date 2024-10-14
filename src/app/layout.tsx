@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -13,19 +14,6 @@ const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
-});
-
-const montrealMedium = localFont({
-  src: "./fonts/PPNeueMontreal-Medium.otf",
-  variable: "--font-montreal-medium",
-});
-const montrealBook = localFont({
-  src: "./fonts/PPNeueMontreal-Book.otf",
-  variable: "--font-montreal-book",
-});
-const montrealBold = localFont({
-  src: "./fonts/PPNeueMontreal-Bold.otf",
-  variable: "--font-montreal-bold",
 });
 
 export const metadata: Metadata = {
@@ -44,10 +32,11 @@ export default function RootLayout({
         <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
       </Head> */}
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montrealMedium.className} ${montrealBook.className}  ${montrealBold.className}overflow-x-hidden antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable}  overflow-x-hidden antialiased`}
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
 import {
   Navbar as LaufNav,
   NavbarBrand,
@@ -21,75 +23,69 @@ export default function Navbar() {
     <LaufNav className="bg-white w-full z-50" shouldHideOnScroll={isDesktop}>
       <div className=" px-4 md:px-20 lg:px-28 flex w-full justify-between items-center py-4 ">
         {/* Left side: Logo and Links */}
-        <div className="flex items-center gap-8">
+        <div className="flex flex-1 items-center gap-8">
           <NavbarBrand>
             <Link href="/">
-              <h3 className="text-xl font-bold tracking-tighter">✦ Lauf</h3>
+              <motion.div
+                className="h-auto w-[56px]"
+                whileHover={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                <Image
+                  src="/black-text.png"
+                  alt="Brady Digital Consulting Logo"
+                  layout="responsive"
+                  width={56}
+                  height={40}
+                  objectFit="cover"
+                />
+              </motion.div>
             </Link>
           </NavbarBrand>
-          <NavbarContent className="hidden md:flex text-neutral-500 gap-6">
-            <NavbarItem>
-              <Link
-                color="foreground"
-                className="hover:text-black transition"
-                href="/work"
-              >
-                Work
-              </Link>
-            </NavbarItem>
-            <NavbarItem>
-              <Link
-                color="foreground"
-                className="hover:text-black transition"
-                href="/services"
-              >
-                Services
-              </Link>
-            </NavbarItem>
-            <NavbarItem>
-              <Link
-                color="foreground"
-                className="hover:text-black transition"
-                href="/pricing"
-              >
-                Pricing
-              </Link>
-            </NavbarItem>
-            <NavbarItem>
-              <Link
-                color="foreground"
-                className="hover:text-black transition"
-                href="/how-it-works"
-              >
-                How It Works
-              </Link>
-            </NavbarItem>
-            <NavbarItem>
-              <Link
-                color="foreground"
-                className="hover:text-black transition"
-                href="/faq"
-              >
-                FAQ
-              </Link>
-            </NavbarItem>
-          </NavbarContent>
         </div>
-
+        <NavbarContent className="hidden md:flex flex-1 justify-center text-neutral-500 gap-8">
+          <NavbarItem>
+            <Link
+              color="foreground"
+              className="hover:text-neutral-900 duration-300"
+              href="#work"
+            >
+              Work
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link
+              color="foreground"
+              className="hover:text-neutral-900 duration-300"
+              href="#services"
+            >
+              Services
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link
+              color="foreground"
+              className="hover:text-neutral-900 duration-300"
+              href="#how-it-works"
+            >
+              How It Works
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link
+              color="foreground"
+              className="hover:text-neutral-900 duration-300"
+              href="#pricing"
+            >
+              Pricing
+            </Link>
+          </NavbarItem>
+        </NavbarContent>
         {/* Right side: CTA Button */}
-        <div className="flex flex-row items-center gap-4">
-          <div className="md:flex hidden items-center bg-neutral-100 bg-opacity-80 backdrop-blur-sm text-xs md:text-sm rounded-full py-1.5 px-2 gap-2 md:gap-3">
-            <div className="bg-neutral-900 rounded-full py-1 px-3">
-              <span className="text-neutral-100 font-semibold">
-                Now Available
-              </span>
-            </div>
-            <span className="text-neutral-600 font-semibold">
-              for October Projects 🎊
-            </span>
-          </div>
+        <div className="hidden md:flex flex-row justify-end flex-1 items-center gap-4">
+          <span className="text-xs text-neutral-500">Based in Chicago</span>
           <div className="hidden md:block">
-            <button className="bg-white font-semibold border rounded-lg py-2 px-3 text-sm  text-neutral-800">
+            <button className="bg-neutral-50 hover:bg-neutral-100 bg-text-neutral-950 duration-300 font-semibold  rounded-full py-3 px-4 text-sm  text-neutral-800">
               Get in touch
             </button>
           </div>

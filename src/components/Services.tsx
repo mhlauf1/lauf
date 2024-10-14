@@ -1,46 +1,101 @@
+"use client";
 import React from "react";
-import { designData, devData, contentData } from "@/utils/data";
+import { motion, useInView } from "framer-motion";
+import { serviceData } from "@/utils/data";
+import Image from "next/image";
 
 type ServiceProps = {
-  title: string;
-  services: ServiceDataProps[];
-};
-
-type ServiceDataProps = {
   id: number;
-  title: string;
+  services: string[];
+  name: string;
+  delay: number;
+  image: string;
 };
 
-const Service = ({ title, services }: ServiceProps) => (
-  <div className="flex flex-col items-start gap-1">
-    <h3 className="font-semibold text-3xl">{title}</h3>
-    <div className="flex flex-col items-start gap-2 mt-4">
-      {services.map((item) => (
-        <div key={item.id} className="flex flex-col items-start">
-          <h4 className="font-semibold text-neutral-700  text-2xl">
-            {item.title}
-          </h4>
-        </div>
-      ))}
-    </div>
-  </div>
-);
+const Service = ({ image, services, id, delay, name }: ServiceProps) => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
 
-const Services = () => {
+  const animationProps = {
+    initial: { opacity: 0, y: 20 },
+    animate: isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
+    transition: { duration: 0.7, ease: "easeOut", delay },
+  };
+
   return (
-    <section className="flex h-auto flex-col md:flex-row rounded-xl bg-[#F1EDEA] gap-2 md:gap-3 mx-4 md:mx-20 px-4 md:px-20 lg:px-36 lg:mx-36 items-start py-16 md:py-24">
-      <div className="flex flex-1 flex-col">
-        <h2 className="text-3xl  lg:text-4xl  font-semibold">
-          What we help with
-        </h2>
-        <div className="flex flex-col mt-16 gap-16">
-          <Service title={devData.title} services={devData.services} />
-          <Service title={designData.title} services={designData.services} />
-          <Service title={contentData.title} services={contentData.services} />
+    <motion.div
+      key={id}
+      className="flex flex-col rounded-md h-[600px] w-full flex-1 items-start gap-1"
+      ref={ref}
+      {...animationProps}
+    >
+      <div className="mt-auto p-6">
+        <h3 className="text-3xl font-semibold">{name}</h3>
+        <div className="flex flex-wrap gap-1 md:gap-2 mt-4">
+          {services.map((item) => (
+            <div key={item} className="flex flex-col items-start">
+              <h4 className="font-medium text-neutral-600 text-sm md:text-lg rounded-full py-2 px-4 bg-white hover:bg-[#4782ed] duration-500 hover:text-white border">
+                {item}
+              </h4>
+            </div>
+          ))}
+        </div>
+        <div className="h-auto w-auto flex flex-1">
+          <Image
+            src={image}
+            height={400}
+            width={600}
+            alt={name}
+            layout="responsive"
+            objectFit="cover"
+          />
         </div>
       </div>
-      <div className="flex items-center justify-center w-full mt-12 md:mt-0 flex-1">
-        <div className="w-full h-[300px] md:h-[400px] rounded-lg bg-white"></div>
+    </motion.div>
+  );
+};
+
+const Services: React.FC = () => {
+  const headerRef = React.useRef(null);
+  const isHeaderInView = useInView(headerRef, { once: true, amount: 0.6 });
+
+  const headerAnimationProps = {
+    initial: { opacity: 0, y: 20 },
+    animate: isHeaderInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
+    transition: { duration: 0.7, ease: "easeOut" },
+  };
+
+  return (
+    <section
+      id="services"
+      className="flex flex-col w-full py-24 md:py-36 px-4 md:px-20 lg:px-36"
+    >
+      <motion.div
+        className="flex flex-col"
+        ref={headerRef}
+        {...headerAnimationProps}
+      >
+        <h3
+          style={{ lineHeight: "120%" }}
+          className="text-3xl font-semibold w-[24ch] md:text-5xl tracking-tight lg:text-6xl text-neutral-800"
+        >
+          Services
+        </h3>
+        <p className="mt-1 md:mt-2 text-lg text-neutral-600">
+          What we help with.
+        </p>
+      </motion.div>
+      <div className="flex flex-col mt-6 md:mt-12 md:flex-row gap-16 md:gap-4">
+        {serviceData.map((item, index) => (
+          <Service
+            key={item.id}
+            id={item.id}
+            services={item.tags}
+            name={item.name}
+            delay={0.1 + index * 0.1}
+            image={item.image}
+          />
+        ))}
       </div>
     </section>
   );
