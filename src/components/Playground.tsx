@@ -26,7 +26,7 @@ const PlaygroundItem = ({ name, image, delay }: PlaygroundItemProps) => {
       ref={ref}
       {...animationProps}
     >
-      <h3 className="tracking-tight mt-1 text-2xl md:text-3xl font-semibold md:mt-3 text-neutral-700">
+      <h3 className="tracking-tight mt-1 text-xl md:text-3xl font-semibold md:mt-3 text-neutral-700">
         {name}
       </h3>
       <div className="h-auto rounded-lg w-full">
