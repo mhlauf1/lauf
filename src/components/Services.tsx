@@ -29,8 +29,8 @@ const Service = ({ image, services, id, delay, name }: ServiceProps) => {
       ref={ref}
       {...animationProps}
     >
-      <div className="mt-auto p-4 md:p-6">
-        <h3 className="text-3xl font-semibold">{name}</h3>
+      <div className="mt-auto p-0 md:p-6">
+        <h3 className="text-xl md:text-3xl font-semibold">{name}</h3>
         <div className="flex flex-wrap gap-1 md:gap-2 mt-4">
           {services.map((item) => (
             <div key={item} className="flex flex-col items-start">

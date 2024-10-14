@@ -116,7 +116,7 @@ const Pricing: React.FC = () => {
       >
         <h3
           style={{ lineHeight: "120%" }}
-          className="text-3xl font-semibold w-[24ch] md:text-5xl tracking-tight lg:text-6xl text-neutral-800"
+          className="text-3xl font-semibold md:w-[24ch] md:text-5xl tracking-tight lg:text-6xl text-neutral-800"
         >
           Pricing Tailored to Your Needs
         </h3>

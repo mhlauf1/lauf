@@ -214,16 +214,17 @@ export const pricingData = [
 export const serviceData = [
     {
         id: 1,
-        name: "Website Design",
-        image: "/web-design.png",
-        tags: ["Website Design", "Mobile Responsive", "Interactice Animations", "Figma Prototypes", "Copywriting", "Asset Creation", "Content Creation",]
-    },
-    {
-        id: 2,
         name: "Website Developent",
         image: "/web-dev.png",
         tags: ["Full Scale Websites", "Landing Pages", "App Integrations & APIs", "Forms & Data Collection", "SEO Optimization", "Hosting Solutions", "Analytics",]
     },
+    {
+        id: 2,
+        name: "Website Design",
+        image: "/web-design.png",
+        tags: ["Website Design", "Mobile Responsive", "Interactice Animations", "Figma Prototypes", "Copywriting", "Asset Creation", "Content Creation",]
+    },
+
 ];
 
 
