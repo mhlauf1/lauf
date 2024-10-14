@@ -6,7 +6,6 @@ import {
   useAnimationFrame,
   useMotionValue,
   useTransform,
-  MotionValue,
 } from "framer-motion";
 
 interface HeroCarouselProps {
@@ -20,7 +19,7 @@ const HeroCarousel: React.FC<HeroCarouselProps> = ({ images }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useAnimationFrame((t: number, delta: number) => {
-    let moveBy = baseVelocity * (delta / 1000);
+    const moveBy = baseVelocity * (delta / 1000);
     baseX.set(baseX.get() + moveBy);
   });
 

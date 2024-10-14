@@ -50,8 +50,8 @@ const HowItWorks = () => {
           How it works
         </h3>
         <p className="mt-2 text-lg w-[42ch] text-center text-neutral-600">
-          Getting your business online with us is simple and efficient. Here's
-          the process:
+          Getting your business online with us is simple and efficient.
+          Here&apos;s the process:
         </p>
       </motion.div>
       <div className="flex flex-col mt-4 rounded-xl py-28 px-4 md:px-36 md:flex-row gap-16">
