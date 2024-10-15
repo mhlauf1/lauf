@@ -63,7 +63,7 @@ const FormModal: React.FC = () => {
             >
               <div className="sticky top-0 bg-white z-10 px-12 py-6 flex justify-between items-center border-b">
                 <h2 className="text-2xl font-bold text-gray-800">
-                  Let's Work Together
+                  Let&apos;s Work Together
                 </h2>
                 <button
                   onClick={() => setIsOpen(false)}
@@ -75,8 +75,8 @@ const FormModal: React.FC = () => {
 
               <div className="px-12 py-6 overflow-y-auto max-h-[calc(100vh-10rem)]">
                 <p className="text-gray-800 text-xl md:text-2xl mb-6">
-                  Fill out the form below and we'll get back to you as soon as
-                  possible.
+                  Fill out the form below and we&apos;ll get back to you as soon
+                  as possible.
                 </p>
                 <div className="hb-p-6703e04b7b400700392b6ee6-1 w-full"></div>
                 <img
