@@ -46,8 +46,8 @@ const Testimonial = ({ url, quote, client, logo, delay }: TestimonialProps) => {
       </div>
       <div className="mt-24">
         <h3
-          style={{ lineHeight: "125%" }}
-          className="text-2xl w-[95%] text-neutral-700 md:text-4xl font-medium"
+          style={{ lineHeight: "130%" }}
+          className="text-xl md:text-2xl md:w-[95%] text-neutral-700 lg:text-4xl font-medium"
         >
           &ldquo;{quote}&ldquo;
         </h3>

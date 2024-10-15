@@ -1,6 +1,6 @@
 import RecentWorks from "@/components/RecentWorks";
 import TextBanner from "@/components/TextBanner";
-import Services from "@/components/Services";
+import Expertise from "@/components/Expertise";
 import Playgorund from "@/components/Playground";
 import HowItWorks from "@/components/HowItWorks";
 import Pricing from "@/components/Pricing";
@@ -14,7 +14,7 @@ export default function Home() {
     <main>
       <Hero />
       <TextBanner />
-      <Services />
+      <Expertise />
       <RecentWorks />
       <HowItWorks />
       <Pricing />

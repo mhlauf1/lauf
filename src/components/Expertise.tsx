@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 import { motion, useInView } from "framer-motion";
-import { serviceData } from "@/utils/data";
+import { expertiseData } from "@/utils/data";
 import Image from "next/image";
 
-type ServiceProps = {
+type ExpertiseItemProps = {
   id: number;
   services: string[];
   name: string;
@@ -12,7 +12,13 @@ type ServiceProps = {
   image: string;
 };
 
-const Service = ({ image, services, id, delay, name }: ServiceProps) => {
+const ExpertiseItem = ({
+  image,
+  services,
+  id,
+  delay,
+  name,
+}: ExpertiseItemProps) => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
@@ -56,7 +62,7 @@ const Service = ({ image, services, id, delay, name }: ServiceProps) => {
   );
 };
 
-const Services: React.FC = () => {
+const Expertise: React.FC = () => {
   const headerRef = React.useRef(null);
   const isHeaderInView = useInView(headerRef, { once: true, amount: 0.6 });
 
@@ -84,8 +90,8 @@ const Services: React.FC = () => {
         </h3>
       </motion.div>
       <div className="flex flex-col mt-6 md:mt-8 md:flex-row gap-16 md:gap-8">
-        {serviceData.map((item, index) => (
-          <Service
+        {expertiseData.map((item, index) => (
+          <ExpertiseItem
             key={item.id}
             id={item.id}
             services={item.tags}
@@ -99,4 +105,4 @@ const Services: React.FC = () => {
   );
 };
 
-export default Services;
+export default Expertise;

@@ -212,7 +212,7 @@ export const pricingData = [
     },
 ];
 
-export const serviceData = [
+export const expertiseData = [
     {
         id: 1,
         name: "Website Development",

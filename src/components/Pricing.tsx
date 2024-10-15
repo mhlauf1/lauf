@@ -107,16 +107,25 @@ const Pricing: React.FC = () => {
   const tagRef = useRef(null);
   const isTagInView = useInView(tagRef, { once: true, amount: 0.5 });
 
+  const spanRef = useRef(null);
+  const isSpanInView = useInView(spanRef, { once: true, amount: 0.5 });
+
   const tagAnimationProps = {
     initial: { opacity: 0, y: 10 },
     animate: isTagInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 },
     transition: { duration: 0.7, ease: "easeOut", delay: 0.5 },
   };
 
+  const spanAnimationProps = {
+    initial: { opacity: 0, y: 10 },
+    animate: isSpanInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 },
+    transition: { duration: 0.7, ease: "easeOut", delay: 0.5 },
+  };
+
   return (
     <section
       id="pricing"
-      className="flex flex-col w-full py-24 md:py-36 px-4 md:px-20 lg:px-36"
+      className="flex flex-col w-full py-24 md:py-36 px-4 md:px-20 lg:px-28"
     >
       <motion.div
         className="flex text-center items-center flex-col"
@@ -143,7 +152,7 @@ const Pricing: React.FC = () => {
           Designed for individuals and teams!
         </motion.span>
       </div>
-      <div className="flex flex-col md:flex-row flex-wrap mt-4 w-full gap-8 md:gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3  mt-4 w-full gap-8 md:gap-4">
         {pricingData.map((option, index) => (
           <div className="flex flex-1" key={option.id}>
             <PricingTier
@@ -157,13 +166,17 @@ const Pricing: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className="flex mt-8 mb-24 justify-center">
+      <motion.div
+        ref={spanRef}
+        {...spanAnimationProps}
+        className="flex mt-8  justify-center"
+      >
         <span className="md:w-[42ch]  text-center text-neutral-600">
           For ongoing website maintenance, hosting assistance and updates, we
           provide 24/7 support for{" "}
           <span className="underline">$59.99 per month.</span>
         </span>
-      </div>
+      </motion.div>
     </section>
   );
 };
