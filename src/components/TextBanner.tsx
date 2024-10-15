@@ -17,15 +17,14 @@ const TextBanner: React.FC = () => {
       <motion.p
         ref={ref}
         style={{ lineHeight: "130%" }}
-        className="text-2xl md:text-3xl lg:text-4xl text-neutral-500 tracking-tight font-semibold md:w-[50ch]"
+        className="text-2xl md:text-3xl lg:text-4xl text-neutral-500 tracking-tight font-semibold md:w-[44ch]"
         {...animationProps}
       >
         <span className="text-neutral-900">
-          We create websites with modern, effective design and smart
-          functionality,
+          We create websites with modern design and smart functionality.
         </span>{" "}
-        focused on solving your challenges and streamlining operations, so you
-        can run things more efficiently.
+        Our team are focused on solving your challenges and streamlining
+        operations, so you can run things more efficiently.
       </motion.p>
     </div>
   );

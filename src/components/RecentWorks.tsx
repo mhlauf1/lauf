@@ -120,11 +120,8 @@ const RecentWorks: React.FC = () => {
           style={{ lineHeight: "120%" }}
           className="text-3xl font-semibold w-[24ch] md:text-5xl tracking-tight lg:text-6xl text-neutral-800"
         >
-          Recent projects
+          Recent Projects
         </h3>
-        <p className="mt-2 text-lg text-neutral-600">
-          Where we delivered business value.
-        </p>
       </motion.div>
       <div className="pt-12 flex flex-col gap-12 md:gap-20">
         {recentWorkData.map((item, index) => (

@@ -18,9 +18,9 @@ const Hero = () => {
       {...animationProps}
     >
       <div className="flex flex-col gap-4 md:gap-6 px-4 w-full items-center mb-6">
-        <div className="flex items-center mb-12 bg-neutral-100 bg-opacity-80 backdrop-blur-sm text-sm rounded-full py-1.5 px-4 gap-3">
+        <div className="flex items-center mb-8 bg-neutral-100 bg-opacity-80 backdrop-blur-sm text-sm rounded-full py-1.5 px-4 gap-3">
           <div className="bg-[#4782ed] rounded-full h-1 w-1"></div>
-          <span className="text-neutral-600">
+          <span className="text-neutral-600 text-md md:text-lg">
             Available for October Projects
           </span>
         </div>

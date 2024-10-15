@@ -83,13 +83,8 @@ export default function Navbar() {
         </NavbarContent>
         {/* Right side: CTA Button */}
         <div className="hidden md:flex flex-row justify-end flex-1 items-center gap-4">
-          <p>
-            <a
-              className="text-xs text-neutral-500"
-              href="mailto:michael@lauf.co"
-            >
-              michael@lauf.co
-            </a>
+          <p className="text-xs text-neutral-500 hover:text-neutral-900 duration-300">
+            <a href="mailto:michael@lauf.co">michael@lauf.co</a>
           </p>
 
           <div className="hidden md:block">

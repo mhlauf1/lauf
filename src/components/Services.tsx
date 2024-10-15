@@ -29,7 +29,7 @@ const Service = ({ image, services, id, delay, name }: ServiceProps) => {
       ref={ref}
       {...animationProps}
     >
-      <div className="mt-auto p-0 md:p-6">
+      <div className="mt-auto">
         <h3 className="text-xl md:text-3xl font-semibold">{name}</h3>
         <div className="flex flex-wrap gap-1 md:gap-2 mt-4">
           {services.map((item) => (
@@ -82,11 +82,8 @@ const Services: React.FC = () => {
         >
           Services
         </h3>
-        <p className="mt-1 md:mt-2 text-lg text-neutral-600">
-          What we help with.
-        </p>
       </motion.div>
-      <div className="flex flex-col mt-6 md:mt-12 md:flex-row gap-16 md:gap-4">
+      <div className="flex flex-col mt-6 md:mt-12 md:flex-row gap-16 md:gap-8">
         {serviceData.map((item, index) => (
           <Service
             key={item.id}

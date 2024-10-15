@@ -47,7 +47,7 @@ const HowItWorks = () => {
           style={{ lineHeight: "120%" }}
           className="text-3xl font-semibold md:text-5xl tracking-tight lg:text-6xl text-neutral-800"
         >
-          How it works
+          How It Works
         </h3>
         <p className="mt-2 text-lg md:w-[42ch] text-center text-neutral-600">
           Getting your business online with us is simple and efficient.

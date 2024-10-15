@@ -12,7 +12,7 @@ export const recentWorkData = [
         name: "Cadence Private Capital",
         tags: ["Web Design", "Web Development", "Content Creation", "SEO", "Hosting",],
         video: "/cpc-video.mov",
-        link: "https://www.cadenceprivatecapital.com/",
+        link: "https://www.cadenceprivatecapital.com",
         screenshots: ["/cpc-1.png", "/cpc-2.png",]
     },
 
@@ -21,7 +21,7 @@ export const recentWorkData = [
         name: "Clare and Mike Wedding",
         tags: ["Web Design", "Web Development", "Content Creation", "Form Collection", "Hosting"],
         video: "/cam.mov",
-        link: "https://www.clareandmikewedding.com/",
+        link: "https://www.clareandmikewedding.com",
         screenshots: ["/cam.png", "/cam2.png",]
     },
 ];
@@ -204,7 +204,7 @@ export const pricingData = [
     },
     {
         id: 3,
-        name: "Full Stack Solutions",
+        name: "Full Stack Solution",
         featured: false,
         description: "For robust websites with advanced features and interactivity.",
         price: 5000,
@@ -215,7 +215,7 @@ export const pricingData = [
 export const serviceData = [
     {
         id: 1,
-        name: "Website Developent",
+        name: "Website Development",
         image: "/web-dev.png",
         tags: ["Full Scale Websites", "Landing Pages", "App Integrations & APIs", "Forms & Data Collection", "SEO Optimization", "Hosting Solutions", "Analytics",]
     },
@@ -223,7 +223,7 @@ export const serviceData = [
         id: 2,
         name: "Website Design",
         image: "/web-design.png",
-        tags: ["Website Design", "Mobile Responsive", "Interactice Animations", "Figma Prototypes", "Copywriting", "Asset Creation", "Content Creation",]
+        tags: ["Website Design", "Mobile Responsive", "Interactive Animations", "Figma Prototypes", "Copywriting", "Asset Creation", "Content Creation",]
     },
 
 ];
@@ -245,3 +245,43 @@ export const heroImages = [
     "/design-5.png",
     "/design-6.png",
 ];
+
+export const testimonialData = [
+    {
+        id: 0,
+        url: "https://www.cadenceprivatecapital.com",
+        quote: "Michael did an outstanding job on the website for Cadence Private Capital. He provided the service level of a top-tier web design and development at a very reasonable price. Additionally, the personal attention, availability, and attention to detail made this a great all-around experience. We highly recommend Michael for any website design or development services.",
+        client: {
+            image: "/peter-mark.png",
+            name: "Peter Mark",
+            position: "Cadence Private Capital Co-Founder"
+        },
+        logo: "/cadence-logo.png"
+    },
+    {
+        id: 1,
+        url: "https://www.bradydigitalconsulting.com",
+        quote: "Michael did an outstanding job on the website for Cadence Private Capital. He provided the service level of a top-tier web design and development at a very reasonable price. Additionally, the personal attention, availability, and attention to detail made this a great all-around experience. We highly recommend Michael for any website design or development services.",
+        client: {
+            image: "/jack-brady.png",
+            name: "Jack Brady",
+            position: "Brady Digital Consulting Co-Founder"
+        },
+        logo: "/brady-logo.png"
+    },
+]
+
+export const teamData = [
+    {
+        id: 0,
+        name: "Clare Laufersweiler",
+        position: "Co-Founder, Business Operations",
+        image: "/clare.png"
+    },
+    {
+        id: 1,
+        name: "Michael Laufersweiler",
+        position: "Co-Founder, Design & Development",
+        image: "/clare.png"
+    },
+]

@@ -38,22 +38,22 @@ const PricingTier: React.FC<PricingOption & { delay: number }> = ({
         featured ? "bg-neutral-950" : ""
       }`}
     >
-      <div className="flex flex-col mt-8 md:mt-16 w-full gap-2 items-start">
+      <div className="flex flex-col mt-8  w-full gap-2 items-start">
         <h4
           className={`font-medium text-3xl md:text-4xl ${
             featured ? "text-neutral-50" : "text-neutral-800"
-          }`}
+          } h-16 md:h-20 flex items-center`} // Added fixed height
         >
           {name}
         </h4>
         <p
-          className={`w-[30ch] text-md md:text-lg mt-2 leading-[140%] ${
+          className={`w-full md:w-[30ch] text-md md:text-lg mt-2 leading-[140%] ${
             featured ? "text-neutral-200" : "text-neutral-600"
-          }`}
+          } h-20 md:h-28`} // Added fixed height
         >
           {description}
         </p>
-        <div className="flex flex-col md:items-center w-full my-8 md:my-10 gap-2">
+        <div className="flex flex-col md:items-center w-full my-6 md:my-10 gap-2">
           <span
             className={`text-md md:text-xl tracking-tight ${
               featured ? "text-neutral-300" : "text-neutral-700"
@@ -104,6 +104,15 @@ const Pricing: React.FC = () => {
     transition: { duration: 0.7, ease: "easeOut" },
   };
 
+  const tagRef = useRef(null);
+  const isTagInView = useInView(tagRef, { once: true, amount: 0.5 });
+
+  const tagAnimationProps = {
+    initial: { opacity: 0, y: 10 },
+    animate: isTagInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 },
+    transition: { duration: 0.7, ease: "easeOut", delay: 0.5 },
+  };
+
   return (
     <section
       id="pricing"
@@ -125,12 +134,16 @@ const Pricing: React.FC = () => {
           hidden fees—just results.
         </p>
       </motion.div>
-      <div className="flex items-end mt-12 justify-end">
-        <span className="bg-blue-100 text-[#4782ed] text-xs font-semibold px-2 py-1 rounded-md">
+      <div className="flex mt-12 justify-start md:justify-end">
+        <motion.span
+          ref={tagRef}
+          {...tagAnimationProps}
+          className="bg-blue-100 text-[#4782ed] text-xs font-semibold px-2 py-1 rounded-md"
+        >
           Designed for individuals and teams!
-        </span>
+        </motion.span>
       </div>
-      <div className="flex flex-col md:flex-row mt-4 w-full gap-8 md:gap-4">
+      <div className="flex flex-col md:flex-row flex-wrap mt-4 w-full gap-8 md:gap-4">
         {pricingData.map((option, index) => (
           <div className="flex flex-1" key={option.id}>
             <PricingTier
