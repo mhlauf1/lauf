@@ -54,7 +54,7 @@ const HowItWorks = () => {
           Here&apos;s the process:
         </p>
       </motion.div>
-      <div className="flex flex-col rounded-xl py-16 md:py-28 px-4 md:px-36 md:flex-row gap-16">
+      <div className="flex flex-col rounded-xl py-12 md:py-20 px-4 md:px-36 md:flex-row gap-16">
         <motion.div
           ref={stepsRef}
           {...stepsAnimationProps}
@@ -83,19 +83,6 @@ const HowItWorks = () => {
                 </p>
               </motion.div>
             ))}
-            <motion.div
-              className="h-auto w-full md:hidden mt-12 flex flex-1"
-              ref={imageRef}
-              {...imageAnimationProps}
-            >
-              <Image
-                src="/hiw-image.png"
-                height={100}
-                width={100}
-                layout="responsive"
-                alt="How It Works"
-              />
-            </motion.div>
           </div>
         </motion.div>
         <div className="flex flex-1 text-center justify-between items-end flex-col">

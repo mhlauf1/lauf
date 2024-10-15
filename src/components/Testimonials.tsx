@@ -55,7 +55,7 @@ const Testimonial = ({ url, quote, client, logo, delay }: TestimonialProps) => {
       <div className="h-[1px] bg-black/10 w-full mt-12"></div>
       <div className="flex md:flex-row flex-col mt-12 justify-between items-start gap-10 md:items-center">
         <div className="flex items-center gap-4 md:gap-8">
-          <div className="h-[100px] md:h-[125px] relative w-[100px]   md:w-[125px]">
+          <div className="h-[80px] md:h-[100px] relative w-[80px] md:w-[100px]">
             <Image
               src={client.image}
               fill
@@ -68,7 +68,7 @@ const Testimonial = ({ url, quote, client, logo, delay }: TestimonialProps) => {
             <p className="text-neutral-600">{client.position}</p>
           </div>
         </div>
-        <div className="h-[32px] relative w-[130px] md:h-[42px]  md:w-[170px]">
+        <div className="h-[28px] relative w-[114px] md:h-[36px]  md:w-[140px]">
           <Image src={logo} fill alt="Company Logo" />
         </div>
       </div>

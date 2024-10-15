@@ -49,7 +49,7 @@ const PricingTier: React.FC<PricingOption & { delay: number }> = ({
         <p
           className={`w-full md:w-[30ch] text-md md:text-lg mt-2 leading-[140%] ${
             featured ? "text-neutral-200" : "text-neutral-600"
-          } h-20 md:h-28`} // Added fixed height
+          } h-auto md:h-28`} // Added fixed height
         >
           {description}
         </p>

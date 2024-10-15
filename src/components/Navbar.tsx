@@ -50,16 +50,7 @@ export default function Navbar() {
               className="hover:text-neutral-900 duration-300"
               href="#work"
             >
-              Work
-            </Link>
-          </NavbarItem>
-          <NavbarItem>
-            <Link
-              color="foreground"
-              className="hover:text-neutral-900 duration-300"
-              href="#services"
-            >
-              Services
+              Projects
             </Link>
           </NavbarItem>
           <NavbarItem>
@@ -128,27 +119,9 @@ export default function Navbar() {
               <Link
                 className="hover:text-neutral-500 transition"
                 onClick={toggleMenu}
-                href="/"
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="hover:text-neutral-500 transition"
-                onClick={toggleMenu}
                 href="/work"
               >
-                Work
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="hover:text-neutral-500 transition"
-                onClick={toggleMenu}
-                href="/services"
-              >
-                Services
+                Projects
               </Link>
             </li>
             <li>
@@ -169,22 +142,13 @@ export default function Navbar() {
                 Pricing
               </Link>
             </li>
-            <li>
-              <Link
-                className="hover:text-neutral-500 transition"
-                onClick={toggleMenu}
-                href="/faq"
-              >
-                FAQ
-              </Link>
-            </li>
             <p>
               <a className="text-neutral-500" href="mailto:michael@lauf.co">
                 michael@lauf.co
               </a>
             </p>
             <li>
-              <button className="bg-white border rounded-lg py-2 px-3 text-sm font-medium text-neutral-800">
+              <button className="bg-[#4782ed] hover:bg-[#5a91f5] mt-4 duration-300 flex items-center gap-4 font-semibold rounded-full py-4 px-8 text-white">
                 Get in touch
               </button>
             </li>

@@ -14,12 +14,12 @@ export default function Home() {
     <main>
       <Hero />
       <TextBanner />
-      <RecentWorks />
       <Services />
-      <Testimonials />
-      <Playgorund />
+      <RecentWorks />
       <HowItWorks />
       <Pricing />
+      <Testimonials />
+      <Playgorund />
       <Team />
       <CTA />
     </main>

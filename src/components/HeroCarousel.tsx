@@ -50,7 +50,7 @@ const HeroCarousel: React.FC<HeroCarouselProps> = ({ images }) => {
         {images.concat(images).map((src, index) => (
           <div
             key={index}
-            className="flex-shrink-0 flex items-end w-76 h-64 mx-2"
+            className="flex-shrink-0 flex items-end w-64 h-48 md:w-76 md:h-64 mx-2"
           >
             <Image
               src={src}

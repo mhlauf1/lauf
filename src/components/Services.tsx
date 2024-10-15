@@ -80,10 +80,10 @@ const Services: React.FC = () => {
           style={{ lineHeight: "120%" }}
           className="text-3xl font-semibold w-[24ch] md:text-5xl tracking-tight lg:text-6xl text-neutral-800"
         >
-          Services
+          Our Expertise
         </h3>
       </motion.div>
-      <div className="flex flex-col mt-6 md:mt-12 md:flex-row gap-16 md:gap-8">
+      <div className="flex flex-col mt-6 md:mt-8 md:flex-row gap-16 md:gap-8">
         {serviceData.map((item, index) => (
           <Service
             key={item.id}
