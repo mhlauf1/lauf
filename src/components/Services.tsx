@@ -40,11 +40,12 @@ const Service = ({ image, services, id, delay, name }: ServiceProps) => {
             </div>
           ))}
         </div>
-        <div className="h-auto w-auto flex flex-1">
+        <div className="h-auto rounded-lg mt-4 border w-auto flex flex-1">
           <Image
             src={image}
             height={400}
             width={600}
+            className="rounded-lg"
             alt={name}
             layout="responsive"
             objectFit="cover"

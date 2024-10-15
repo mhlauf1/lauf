@@ -30,10 +30,11 @@ const PlaygroundItem = ({ name, image, delay }: PlaygroundItemProps) => {
         {name}
       </h3>
       <div className="h-auto rounded-lg w-full">
-        <div className="h-auto w-auto p-2 flex flex-1">
+        <div className="h-auto w-auto p-2  flex flex-1">
           <Image
             src={image}
             height={100}
+            className="rounded-lg"
             width={100}
             alt={name}
             layout="responsive"

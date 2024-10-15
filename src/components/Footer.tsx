@@ -32,8 +32,8 @@ const Footer = () => {
           <Link href="#pricng">Pricing</Link>
         </li>
       </ul>
-      <div className="md:hidden flex mb-6  flex-1">
-        <div className="h-auto w-[42px]">
+      <div className="md:hidden flex mb-6 flex-1">
+        <div className="h-auto w-[54px]">
           <Image
             src="/black-text.png"
             alt="Brady Digital Consulting Logo"
@@ -44,7 +44,7 @@ const Footer = () => {
           />
         </div>
       </div>
-      <div className="flex justify-end flex-1">
+      <div className="flex text-xs md:text-sm text-neutral-600 justify-end flex-1">
         <p>@Lauf Co. All rights reserved</p>
       </div>
     </footer>

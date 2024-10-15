@@ -125,7 +125,12 @@ const Pricing: React.FC = () => {
           hidden fees—just results.
         </p>
       </motion.div>
-      <div className="flex flex-col px-4 md:flex-row mt-16 w-full gap-8 md:gap-4">
+      <div className="flex items-end mt-12 justify-end">
+        <span className="bg-blue-100 text-[#4782ed] text-xs font-semibold px-2 py-1 rounded-md">
+          Designed for individuals and teams!
+        </span>
+      </div>
+      <div className="flex flex-col md:flex-row mt-4 w-full gap-8 md:gap-4">
         {pricingData.map((option, index) => (
           <div className="flex flex-1" key={option.id}>
             <PricingTier
@@ -138,6 +143,13 @@ const Pricing: React.FC = () => {
             />
           </div>
         ))}
+      </div>
+      <div className="flex mt-8 mb-24 justify-center">
+        <span className="md:w-[42ch]  text-center text-neutral-600">
+          For ongoing website maintenance, hosting assistance and updates, we
+          provide 24/7 support for{" "}
+          <span className="underline">$59.99 per month.</span>
+        </span>
       </div>
     </section>
   );

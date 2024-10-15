@@ -20,11 +20,11 @@ export default function Navbar() {
   };
 
   return (
-    <LaufNav className="bg-white w-full z-50" shouldHideOnScroll={isDesktop}>
+    <LaufNav className="bg-white w-full z-20" shouldHideOnScroll={isDesktop}>
       <div className=" px-4 md:px-20 lg:px-28 flex w-full justify-between items-center py-4 ">
         {/* Left side: Logo and Links */}
         <div className="flex flex-1 items-center gap-8">
-          <NavbarBrand>
+          <NavbarBrand className="flex gap-6 items-center">
             <Link href="/">
               <motion.div
                 className="h-auto w-[56px]"
@@ -83,7 +83,15 @@ export default function Navbar() {
         </NavbarContent>
         {/* Right side: CTA Button */}
         <div className="hidden md:flex flex-row justify-end flex-1 items-center gap-4">
-          <span className="text-xs text-neutral-500">Based in Chicago</span>
+          <p>
+            <a
+              className="text-xs text-neutral-500"
+              href="mailto:michael@lauf.co"
+            >
+              michael@lauf.co
+            </a>
+          </p>
+
           <div className="hidden md:block">
             <button className="bg-neutral-50 hover:bg-neutral-100 bg-text-neutral-950 duration-300 font-semibold  rounded-full py-3 px-4 text-sm  text-neutral-800">
               Get in touch
@@ -175,6 +183,11 @@ export default function Navbar() {
                 FAQ
               </Link>
             </li>
+            <p>
+              <a className="text-neutral-500" href="mailto:michael@lauf.co">
+                michael@lauf.co
+              </a>
+            </p>
             <li>
               <button className="bg-white border rounded-lg py-2 px-3 text-sm font-medium text-neutral-800">
                 Get in touch

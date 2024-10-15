@@ -1,27 +1,28 @@
 export const recentWorkData = [
     {
         id: 1,
-        name: "Cadence Private Capital",
-        tags: ["Web Design", "Web Development", "Content Creation", "SEO", "Hosting",],
+        name: "Brady Digital Consulting",
+        tags: ["Web Design", "Web Development", "Content Creation", "Asset Creation", "SEO", "Hosting"],
         video: "/brady-home.mov",
+        link: "https://www.bradydigitalconsulting.com",
         screenshots: ["/brady-1.png", "/brady-2.png", "/brady-3.png", "/brady-4.png", "/brady-5.png",]
     },
     {
         id: 2,
-        name: "Brady Digital Consulting",
-        tags: ["Web Design", "Web Development", "Content Creation", "Asset Creation", "SEO", "Hosting"],
-        video: "/brady-home.mov",
-        screenshots: ["/brady-1.png", "/brady-2.png", "/brady-3.png", "/brady-4.png", "/brady-5.png",]
-
-
+        name: "Cadence Private Capital",
+        tags: ["Web Design", "Web Development", "Content Creation", "SEO", "Hosting",],
+        video: "/cpc-video.mov",
+        link: "https://www.cadenceprivatecapital.com/",
+        screenshots: ["/cpc-1.png", "/cpc-2.png",]
     },
+
     {
         id: 3,
         name: "Clare and Mike Wedding",
         tags: ["Web Design", "Web Development", "Content Creation", "Form Collection", "Hosting"],
-        video: "/brady-home.mov",
-        screenshots: ["/brady-1.png", "/brady-2.png", "/brady-3.png", "/brady-4.png", "/brady-5.png",]
-
+        video: "/cam.mov",
+        link: "https://www.clareandmikewedding.com/",
+        screenshots: ["/cam.png", "/cam2.png",]
     },
 ];
 

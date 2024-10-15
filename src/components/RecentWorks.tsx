@@ -3,6 +3,7 @@ import React from "react";
 import { motion, useInView } from "framer-motion";
 import { recentWorkData } from "@/utils/data";
 import Image from "next/image";
+import Link from "next/link";
 
 type WorkItemProps = {
   name: string;
@@ -10,9 +11,17 @@ type WorkItemProps = {
   delay: number;
   video: string;
   screenshots: string[];
+  link: string;
 };
 
-const WorkItem = ({ name, tags, delay, video, screenshots }: WorkItemProps) => {
+const WorkItem = ({
+  name,
+  tags,
+  delay,
+  video,
+  screenshots,
+  link,
+}: WorkItemProps) => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
@@ -43,39 +52,46 @@ const WorkItem = ({ name, tags, delay, video, screenshots }: WorkItemProps) => {
           ))}
         </div>
       </div>
-      <div className="flex flex-col md:flex-row items-center justify-center gap-4 rounded-lg w-full bg-[#F1EDEA] px-4 py-12 md:px-12 lg:py-36">
-        <div className="w-full md:w-1/3 aspect-video rounded-lg overflow-hidden shadow-md">
-          <Image
-            src={screenshots[1]}
-            layout="responsive"
-            width={16}
-            height={9}
-            objectFit="cover"
-            alt={`${name} screenshot 1`}
-          />
+      <Link target="_blank" className="relative group" href={link}>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 rounded-lg w-full bg-[#F1EDEA] px-4 py-12 md:px-12 lg:py-36">
+          <div className="w-full md:w-1/3  rounded-lg overflow-hidden shadow-md">
+            <Image
+              src={screenshots[0]}
+              layout="responsive"
+              width={16}
+              height={9}
+              objectFit="cover"
+              alt={`${name} screenshot 1`}
+            />
+          </div>
+          <div className="w-full md:w-1/3  rounded-lg overflow-hidden shadow-md">
+            <video
+              src={video}
+              controls={false}
+              autoPlay
+              playsInline
+              muted
+              loop
+              className="w-full h-full object-cover "
+            />
+          </div>
+          <div className="w-full md:w-1/3  rounded-lg overflow-hidden shadow-md">
+            <Image
+              src={screenshots[1]}
+              layout="responsive"
+              width={16}
+              height={9}
+              objectFit="cover"
+              alt={`${name} screenshot 2`}
+            />
+          </div>
         </div>
-        <div className="w-full md:w-1/3 aspect-video rounded-lg overflow-hidden shadow-md">
-          <video
-            src={video}
-            controls={false}
-            autoPlay
-            playsInline
-            muted
-            loop
-            className="w-full h-full object-cover "
-          />
+        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-end p-4 justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+          <span className="text-white text-2xl font-semibold">
+            Visit Live Site
+          </span>
         </div>
-        <div className="w-full md:w-1/3 aspect-video rounded-lg overflow-hidden shadow-md">
-          <Image
-            src={screenshots[4] || screenshots[2]}
-            layout="responsive"
-            width={16}
-            height={9}
-            objectFit="cover"
-            alt={`${name} screenshot 2`}
-          />
-        </div>
-      </div>
+      </Link>
     </motion.div>
   );
 };
@@ -119,6 +135,7 @@ const RecentWorks: React.FC = () => {
               delay={0.1 + index * 0.1}
               video={item.video}
               screenshots={item.screenshots}
+              link={item.link}
             />
           </div>
         ))}

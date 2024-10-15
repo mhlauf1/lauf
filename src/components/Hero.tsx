@@ -1,10 +1,9 @@
 "use client";
-"use client";
 import React from "react";
-import { IoIosArrowForward } from "react-icons/io";
 import { motion } from "framer-motion";
 import HeroCarousel from "./HeroCarousel";
 import { heroImages } from "@/utils/data";
+import FormModal from "./FormModal";
 
 const Hero = () => {
   const animationProps = {
@@ -41,12 +40,7 @@ const Hero = () => {
           </span>{" "}
           designed to elevate your brand and grow your business.
         </p>
-        <div className="flex flex-col mt-4 items-center gap-4">
-          <button className="bg-[#4782ed] hover:bg-[#5a91f5] duration-300 flex items-center gap-4 font-semibold rounded-full py-4 px-8 text-white">
-            Let&apos;s work together
-            <IoIosArrowForward />
-          </button>
-        </div>
+        <FormModal />
       </div>
       <div className="w-full">
         <HeroCarousel images={heroImages} />
