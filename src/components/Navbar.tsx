@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <LaufNav className="bg-white w-full z-20" shouldHideOnScroll={isDesktop}>
-      <div className=" px-4 md:px-20 lg:px-28 flex w-full justify-between items-center py-4 ">
+      <div className=" px-4 md:px-20 lg:px-28 flex w-full justify-between items-center py-6">
         {/* Left side: Logo and Links */}
         <div className="flex flex-1 items-center gap-8">
           <NavbarBrand className="flex gap-6 items-center">
@@ -74,17 +74,10 @@ export default function Navbar() {
         </NavbarContent>
         {/* Right side: CTA Button */}
         <div className="hidden md:flex flex-row justify-end flex-1 items-center gap-4">
-          <p className="text-xs text-neutral-500 hover:text-neutral-900 duration-300">
+          <p className="bg-neutral-50 hover:bg-neutral-100 bg-text-neutral-950 duration-300 font-semibold  rounded-full py-3 px-4 text-sm  text-neutral-800">
             <a href="mailto:michael@lauf.co">michael@lauf.co</a>
           </p>
-
-          <div className="hidden md:block">
-            <button className="bg-neutral-50 hover:bg-neutral-100 bg-text-neutral-950 duration-300 font-semibold  rounded-full py-3 px-4 text-sm  text-neutral-800">
-              Get in touch
-            </button>
-          </div>
         </div>
-
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
