@@ -30,7 +30,7 @@ const Member = ({ image, name, position, delay }: MemberProps) => {
       <div className="flex flex-col relative flex-1  w-auto">
         <Image
           width={100}
-          className="rounded-xl flex max-h-[500px] object-cover flex-1"
+          className="rounded-xl flex md:min-h-[500px] max-h-[500px] object-cover flex-1"
           height={100}
           layout="responsive"
           objectFit="cover"
