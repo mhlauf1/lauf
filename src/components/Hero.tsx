@@ -14,7 +14,7 @@ const Hero = () => {
 
   return (
     <motion.section
-      className="min-h-auto md:min-h-screen justify-around relative w-full flex flex-col items-center pt-12 md:pt-16 bg-gradient-to-b from-white via-neutral-50 to-white"
+      className="min-h-auto  justify-around relative w-full flex flex-col items-center pt-12 md:pt-16 bg-gradient-to-b from-white via-neutral-50 to-white"
       {...animationProps}
     >
       <div className="flex flex-col gap-4 md:gap-6 px-4 w-full items-center mb-16 md:mb-6">
@@ -42,7 +42,7 @@ const Hero = () => {
         </p>
         <FormModal />
       </div>
-      <div className="w-full">
+      <div className="w-full mt-16 md:mt-28">
         <HeroCarousel images={heroImages} />
       </div>
     </motion.section>

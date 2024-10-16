@@ -4,7 +4,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { IoIosArrowForward, IoMdClose } from "react-icons/io";
 import Script from "next/script";
 
-const FormModal: React.FC = () => {
+interface FormProps {
+  isCTA?: boolean;
+}
+
+const FormModal = ({ isCTA }: FormProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
 
@@ -39,7 +43,11 @@ const FormModal: React.FC = () => {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="bg-[#4782ed] hover:bg-[#5a91f5] mt-4 duration-300 flex items-center gap-4 font-semibold rounded-full py-4 px-8 text-white"
+        className={`${
+          isCTA
+            ? "bg-neutral-50 hover:bg-white text-[#4782ed]"
+            : "bg-[#4782ed] hover:bg-[#5a91f5] text-white"
+        } mt-4 duration-300 flex items-center gap-4 font-semibold rounded-full py-4 px-8 `}
       >
         Let&apos;s work together
         <IoIosArrowForward />

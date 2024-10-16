@@ -31,7 +31,7 @@ const ExpertiseItem = ({
   return (
     <motion.div
       key={id}
-      className="flex flex-col rounded-md h-[600px] w-full flex-1 items-start gap-1"
+      className="flex flex-col rounded-md max-h-[600px] w-full flex-1 items-start gap-1"
       ref={ref}
       {...animationProps}
     >

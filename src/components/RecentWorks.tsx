@@ -123,7 +123,7 @@ const RecentWorks: React.FC = () => {
           Recent Projects
         </h3>
       </motion.div>
-      <div className="pt-12 flex flex-col gap-16 md:gap-24">
+      <div className="pt-6 md:pt-12 flex flex-col gap-16 md:gap-24">
         {recentWorkData.map((item, index) => (
           <div className="w-full" key={item.id}>
             <WorkItem

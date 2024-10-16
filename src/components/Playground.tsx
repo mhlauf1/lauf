@@ -66,7 +66,7 @@ const Playground: React.FC = () => {
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-800">
           More Works
         </h2>
-        <p className="mt-2 text-lg w-[75%] text-neutral-600">
+        <p className="mt-2 md:text-lg w-[75%] text-neutral-600">
           Explore our creative experiments and side projects.
         </p>
       </motion.div>

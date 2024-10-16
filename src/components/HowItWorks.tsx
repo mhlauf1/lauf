@@ -49,7 +49,7 @@ const HowItWorks = () => {
         >
           How It Works
         </h3>
-        <p className="mt-2 text-lg md:w-[42ch] text-center text-neutral-600">
+        <p className="mt-2 md:text-lg md:w-[42ch] text-center text-neutral-600">
           Getting your business online with us is simple and efficient.
           Here&apos;s the process:
         </p>
@@ -78,7 +78,7 @@ const HowItWorks = () => {
                 <h3 className="text-xl md:text-2xl font-semibold mb-3">
                   {step.title}
                 </h3>
-                <p className="text-neutral-600 text-lg leading-relaxed">
+                <p className="text-neutral-600 md:text-lg leading-relaxed">
                   {step.description}
                 </p>
               </motion.div>

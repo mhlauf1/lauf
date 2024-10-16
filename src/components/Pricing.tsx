@@ -138,7 +138,7 @@ const Pricing: React.FC = () => {
         >
           Pricing Tailored to Your Needs
         </h3>
-        <p className="mt-4 text-lg md:w-[38ch] text-neutral-600">
+        <p className="mt-4 w-[95%] md:text-lg md:w-[38ch] text-neutral-600">
           Flexible packages designed to fit your business and budget, with no
           hidden fees—just results.
         </p>

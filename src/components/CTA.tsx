@@ -1,6 +1,7 @@
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import Image from "next/image";
+import FormModal from "./FormModal";
 
 const CTA = () => {
   return (
@@ -11,10 +12,9 @@ const CTA = () => {
       <p className="text-white text-center px-4 text-xl mt-6">
         Let&apos;s create something great together—start today!
       </p>
-      <button className=" bg-neutral-50  mt-8 hover:bg-white duration-300 flex items-center gap-4 font-semibold rounded-full py-4 px-8 text-[#4782ed]">
-        Let&apos;s work together
-        <IoIosArrowForward />
-      </button>
+      <div className="mt-4">
+        <FormModal isCTA={true} />
+      </div>
       <div className="h-auto hidden md:block absolute bottom-12 right-12 opacity-50 w-[56px]">
         <Image
           src="/white-text.png"
