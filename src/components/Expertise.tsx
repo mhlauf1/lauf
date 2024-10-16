@@ -40,7 +40,7 @@ const ExpertiseItem = ({
         <div className="flex flex-wrap gap-1 md:gap-2 mt-4">
           {services.map((item) => (
             <div key={item} className="flex flex-col items-start">
-              <h4 className="font-medium text-neutral-600 text-sm md:text-lg rounded-full py-2 px-4 bg-white hover:bg-[#4782ed] duration-500 hover:text-white border">
+              <h4 className="font-medium text-neutral-600 text-xs md:text-lg rounded-full py-2 px-4 bg-white hover:bg-[#4782ed] duration-500 hover:text-white border">
                 {item}
               </h4>
             </div>

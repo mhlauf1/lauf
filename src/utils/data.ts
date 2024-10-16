@@ -35,7 +35,7 @@ export const designData = {
         },
         {
             id: 1,
-            title: "Mobile Responsive",
+            title: "Mobile Responsive Design",
         },
         {
             id: 2,
@@ -223,7 +223,7 @@ export const expertiseData = [
         id: 2,
         name: "Website Design",
         image: "/web-design.png",
-        tags: ["Website Design", "Mobile Responsive", "Interactive Animations", "Figma Prototypes", "Copywriting", "Asset Creation", "Content Creation",]
+        tags: ["Website Design", "Mobile Responsiveness", "Interactive Animations", "Figma Prototypes", "Copywriting", "Asset Creation", "Content Creation",]
     },
 
 ];
@@ -282,6 +282,6 @@ export const teamData = [
         id: 1,
         name: "Michael Laufersweiler",
         position: "Co-Founder, Design & Development",
-        image: "/clare.png"
+        image: "/mike-2.png"
     },
 ]

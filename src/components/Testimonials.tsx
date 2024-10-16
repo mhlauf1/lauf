@@ -33,7 +33,7 @@ const Testimonial = ({ url, quote, client, logo, delay }: TestimonialProps) => {
     <motion.div
       ref={ref}
       {...animationProps}
-      className="mt-12 rounded-xl px-4 md:px-16 bg-[#FBF9F7] py-12"
+      className="mt-6 md:mt-12 rounded-xl px-4 md:px-16 bg-[#FBF9F7] py-12"
     >
       <div>
         <Link
@@ -64,7 +64,7 @@ const Testimonial = ({ url, quote, client, logo, delay }: TestimonialProps) => {
             />
           </div>
           <div className="flex flex-col items-start">
-            <h4 className="text-xl font-semibold">{client.name}</h4>
+            <h4 className="text-lg md:text-xl font-semibold">{client.name}</h4>
             <p className="text-neutral-600">{client.position}</p>
           </div>
         </div>

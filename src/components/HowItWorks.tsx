@@ -54,7 +54,7 @@ const HowItWorks = () => {
           Here&apos;s the process:
         </p>
       </motion.div>
-      <div className="flex flex-col rounded-xl py-12 md:py-20 md:flex-row gap-16">
+      <div className="flex flex-col rounded-xl py-4 md:py-212 md:flex-row gap-16">
         <motion.div
           ref={stepsRef}
           {...stepsAnimationProps}

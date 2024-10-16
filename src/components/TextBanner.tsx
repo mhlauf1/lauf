@@ -23,7 +23,7 @@ const TextBanner: React.FC = () => {
         <span className="text-neutral-900">
           We create websites with modern design and smart functionality.
         </span>{" "}
-        Our team are focused on solving your challenges and streamlining
+        Our team is focused on solving your challenges and streamlining
         operations, so you can run things more efficiently.
       </motion.p>
     </div>

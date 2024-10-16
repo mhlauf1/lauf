@@ -38,14 +38,14 @@ const WorkItem = ({
       {...animationProps}
     >
       <div className="flex flex-col items-start gap-3">
-        <h3 className="text-2xl md:text-3xl tracking-tight font-semibold text-neutral-900">
+        <h3 className="text-xl md:text-3xl tracking-tight font-semibold text-neutral-900">
           {name}
         </h3>
-        <div className="flex flex-row gap-2 flex-wrap">
+        <div className="flex flex-row gap-1 md:gap-2 flex-wrap">
           {tags.map((tag) => (
             <span
               key={tag}
-              className="font-medium text-neutral-600 text-sm md:text-base rounded-full py-1.5 px-3 bg-white hover:bg-[#4782ed] duration-300 hover:text-white border"
+              className="font-medium text-neutral-600 text-xs md:text-lg rounded-full py-1.5 px-3 bg-white hover:bg-[#4782ed] duration-300 hover:text-white border"
             >
               {tag}
             </span>
@@ -123,7 +123,7 @@ const RecentWorks: React.FC = () => {
           Recent Projects
         </h3>
       </motion.div>
-      <div className="pt-12 flex flex-col gap-12 md:gap-20">
+      <div className="pt-12 flex flex-col gap-16 md:gap-24">
         {recentWorkData.map((item, index) => (
           <div className="w-full" key={item.id}>
             <WorkItem
