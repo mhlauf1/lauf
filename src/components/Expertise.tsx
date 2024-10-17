@@ -35,18 +35,20 @@ const ExpertiseItem = ({
       ref={ref}
       {...animationProps}
     >
-      <div className="mt-auto">
-        <h3 className="text-xl md:text-3xl font-semibold">{name}</h3>
-        <div className="flex flex-wrap gap-1 md:gap-2 mt-4">
+      <div className="mt-auto flex flex-col justify-between">
+        <h3 className="text-xl md:text-3xl text-neutral-700 font-semibold">
+          {name}
+        </h3>
+        <div className="grid grid-cols-2 xl:grid-cols-3 items-start gap-2 mt-4 md:mt-6">
           {services.map((item) => (
-            <div key={item} className="flex flex-col items-start">
-              <h4 className="font-medium text-neutral-600 text-xs md:text-lg rounded-full py-2 px-4 bg-white hover:bg-[#4782ed] duration-500 hover:text-white border">
+            <div key={item} className="flex w-full flex-1 flex-col items-start">
+              <h4 className="font-medium whitespace-nowrap text-neutral-500 text-xs md:text-sm  w-full text-center rounded-full py-2 px-4 bg-white hover:bg-[#4782ed] duration-500 hover:text-white border">
                 {item}
               </h4>
             </div>
           ))}
         </div>
-        <div className="h-auto rounded-lg mt-4 border w-auto flex flex-1">
+        <div className="h-auto rounded-lg mt-4  w-auto flex flex-1">
           <Image
             src={image}
             height={400}
@@ -75,7 +77,7 @@ const Expertise: React.FC = () => {
   return (
     <section
       id="services"
-      className="flex flex-col w-full py-24 md:py-36 px-4 md:px-20 lg:px-36"
+      className="flex flex-col w-full py-24 md:py-36 px-4 md:px-12 lg:px-20 xl:px-28"
     >
       <motion.div
         className="flex flex-col"
@@ -89,7 +91,7 @@ const Expertise: React.FC = () => {
           Our Expertise
         </h3>
       </motion.div>
-      <div className="flex flex-col mt-6 md:mt-8 md:flex-row gap-16 md:gap-8">
+      <div className="flex flex-col mt-6 md:mt-10 md:flex-row gap-16 md:gap-8">
         {expertiseData.map((item, index) => (
           <ExpertiseItem
             key={item.id}

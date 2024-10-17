@@ -41,11 +41,11 @@ const WorkItem = ({
         <h3 className="text-xl md:text-3xl tracking-tight font-semibold text-neutral-900">
           {name}
         </h3>
-        <div className="flex flex-row gap-1 md:gap-2 flex-wrap">
+        <div className="grid grid-cols-2 md:flex flex-row gap-2 md:whitespace-nowrap w-full overflow-x-auto">
           {tags.map((tag) => (
             <span
               key={tag}
-              className="font-medium text-neutral-600 text-xs md:text-lg rounded-full py-1.5 px-3 bg-white hover:bg-[#4782ed] duration-300 hover:text-white border"
+              className="font-medium text-neutral-500 text-xs md:text-sm rounded-full py-2 px-2 w-full flex-1 text-center bg-white hover:bg-[#4782ed] duration-300 hover:text-white border"
             >
               {tag}
             </span>
@@ -109,7 +109,7 @@ const RecentWorks: React.FC = () => {
   return (
     <section
       id="work"
-      className="flex flex-col px-4 md:px-20 lg:px-36 w-full py-24 md:py-36"
+      className="flex flex-col px-4 md:px-12 lg:px-20 xl:px-28 w-full py-24 md:py-36"
     >
       <motion.div
         className="flex flex-col"

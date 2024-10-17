@@ -87,7 +87,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="flex flex-col mx-4 md:mx-20 lg:mx-36 my-24 md:my-36">
+    <section className="flex flex-col px-4 md:px-12 lg:px-20 xl:px-28 my-24 md:my-36">
       <motion.h3
         ref={headerRef}
         {...headerAnimationProps}

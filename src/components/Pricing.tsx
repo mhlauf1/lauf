@@ -125,7 +125,7 @@ const Pricing: React.FC = () => {
   return (
     <section
       id="pricing"
-      className="flex flex-col w-full py-24 md:py-36 px-4 md:px-20 lg:px-28"
+      className="flex flex-col w-full py-24 md:py-36 px-4 md:px-12 lg:px-20 xl:px-28"
     >
       <motion.div
         className="flex text-center items-center flex-col"
@@ -152,7 +152,7 @@ const Pricing: React.FC = () => {
           Designed for individuals and teams!
         </motion.span>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3  mt-4 w-full gap-8 md:gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3  mt-4 w-full gap-8 md:gap-2">
         {pricingData.map((option, index) => (
           <div className="flex flex-1" key={option.id}>
             <PricingTier

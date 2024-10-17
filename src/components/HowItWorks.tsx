@@ -36,7 +36,7 @@ const HowItWorks = () => {
   return (
     <section
       id="how-it-works"
-      className="mx-4 md:mx-20 lg:mx-36 flex flex-col gap-2 md:gap-3 rounded-xl items-center py-28 md:py-36"
+      className="px-4 md:px-12 lg:px-20 xl:px-28 flex flex-col gap-2 md:gap-3 rounded-xl items-center py-28 md:py-36"
     >
       <motion.div
         ref={headerRef}
@@ -54,7 +54,7 @@ const HowItWorks = () => {
           Here&apos;s the process:
         </p>
       </motion.div>
-      <div className="flex flex-col rounded-xl py-4 md:py-212 md:flex-row gap-16">
+      <div className="flex flex-col rounded-xl py-4 md:py-12 md:flex-row gap-16">
         <motion.div
           ref={stepsRef}
           {...stepsAnimationProps}

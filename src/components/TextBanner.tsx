@@ -13,7 +13,7 @@ const TextBanner: React.FC = () => {
   };
 
   return (
-    <div className="pt-24 pb-12 md:pb-36 md:pt-48 flex px-4 md:px-20 lg:px-36">
+    <div className="pt-24 pb-12 md:pb-36 md:pt-48 flex px-4 md:px-20 lg:px-28">
       <motion.p
         ref={ref}
         style={{ lineHeight: "130%" }}
