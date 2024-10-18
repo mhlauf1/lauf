@@ -14,14 +14,7 @@ type WorkItemProps = {
   link: string;
 };
 
-const WorkItem = ({
-  name,
-  tags,
-  delay,
-  video,
-  screenshots,
-  link,
-}: WorkItemProps) => {
+const WorkItem = ({ name, tags, delay, screenshots, link }: WorkItemProps) => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
@@ -64,37 +57,6 @@ const WorkItem = ({
               alt={`${name} screenshot 1`}
             />
           </div>
-          {/* <div className="w-full md:w-1/3  rounded-lg overflow-hidden shadow-md">
-            <Image
-              src={screenshots[0]}
-              layout="responsive"
-              width={16}
-              height={9}
-              objectFit="cover"
-              alt={`${name} screenshot 1`}
-            />
-          </div>
-          <div className="w-full md:w-1/3  rounded-lg overflow-hidden shadow-md">
-            <video
-              src={video}
-              controls={false}
-              autoPlay
-              playsInline
-              muted
-              loop
-              className="w-full h-full object-cover "
-            />
-          </div>
-          <div className="w-full md:w-1/3  rounded-lg overflow-hidden shadow-md">
-            <Image
-              src={screenshots[1]}
-              layout="responsive"
-              width={16}
-              height={9}
-              objectFit="cover"
-              alt={`${name} screenshot 2`}
-            />
-          </div> */}
         </div>
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-end p-4 justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
           <span className="text-white text-2xl font-semibold">
