@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { FaDribbble, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaDribbble, FaLinkedin } from "react-icons/fa";
 
 import Link from "next/link";
 
