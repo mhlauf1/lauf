@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-// import { Head } from "next/document";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Head from "next/head";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,9 +29,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* <Head>
-        <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
-      </Head> */}
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="BEaUF1hQ50xW7pT-B1zxzSCo0Ud5FQbvu3ej5HBEjJI"
+        />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable}  overflow-x-hidden antialiased`}
       >
