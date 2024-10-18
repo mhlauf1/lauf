@@ -17,9 +17,18 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Lauf - Website Design & Development",
+  title: {
+    default: "Lauf - Website Design & Development",
+    template: "%s - Lauf - Website Design & Development",
+  },
   description:
     "Husband-wife team building custom websites designed to elevate your brand and grow your business.",
+  twitter: {
+    card: "summary_large_image",
+  },
+  openGraph: {
+    images: "/opengraph-image.png",
+  },
 };
 
 export default function RootLayout({
