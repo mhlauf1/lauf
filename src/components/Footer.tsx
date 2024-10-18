@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { FaDribbble, FaLinkedin } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 import Link from "next/link";
 
@@ -29,9 +29,9 @@ const Footer = () => {
           <Link target="_blank" href="https://www.linkedin.com/company/laufco/">
             <FaLinkedin size={24} />
           </Link>
-          <Link target="_blank" href="https://dribbble.com/laufco">
+          {/* <Link target="_blank" href="https://dribbble.com/laufco">
             <FaDribbble size={24} />
-          </Link>
+          </Link> */}
           {/* <Link href="/">
             <FaTwitter size={24} />
           </Link> */}
