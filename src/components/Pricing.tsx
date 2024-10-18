@@ -61,6 +61,7 @@ const PricingTier: React.FC<PricingOption & { delay: number }> = ({
           >
             Starting at
           </span>
+          {/* <div className="flex flex-row gap-1 items-end"> */}
           <h2
             className={`text-4xl md:text-6xl mt-2 font-semibold ${
               featured ? "text-neutral-200" : ""
@@ -68,7 +69,9 @@ const PricingTier: React.FC<PricingOption & { delay: number }> = ({
           >
             ${price}
           </h2>
+          {/* <span className="text-xs">+tax</span> */}
         </div>
+        {/* </div> */}
         <p
           className={`text-sm md:text-md mb-2 md:mb-4 ${
             featured ? "text-neutral-300" : "text-neutral-600"
@@ -152,7 +155,7 @@ const Pricing: React.FC = () => {
           Designed for individuals and teams!
         </motion.span>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3  mt-4 w-full gap-8 md:gap-2">
+      <div className="grid grid-cols-1 md:grid-cols-3  mt-4 w-full gap-8 md:gap-4">
         {pricingData.map((option, index) => (
           <div className="flex flex-1" key={option.id}>
             <PricingTier

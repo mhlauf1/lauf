@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import HeroCarousel from "./HeroCarousel";
 import { heroImages } from "@/utils/data";
-import FormModal from "./FormModal";
+import { IoIosArrowForward } from "react-icons/io";
 
 const Hero = () => {
   const animationProps = {
@@ -38,9 +38,17 @@ const Hero = () => {
           Husband-wife team building custom websites designed to elevate your
           brand and grow your business.
         </p>
-        <FormModal />
+        <a
+          href="https://www.honeybook.com/widget/lauf_283541/cf_id/6703e04b7b400700392b6ee8"
+          target="_blank"
+        >
+          <button className="bg-[#4782ed] hover:bg-[#5a91f5] text-white mt-4 duration-300 flex items-center gap-4 font-semibold rounded-full py-4 px-8">
+            Let&apos;s work together
+            <IoIosArrowForward />
+          </button>
+        </a>
       </div>
-      <div className="w-full mt-16 md:mt-28">
+      <div className="w-full mt-12 md:mt-20">
         <HeroCarousel images={heroImages} />
       </div>
     </motion.section>

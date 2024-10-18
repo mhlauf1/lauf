@@ -1,16 +1,16 @@
 "use client";
 import React from "react";
 import { motion, useInView } from "framer-motion";
-import { playgroundData } from "@/utils/data";
+import { moreWorksData } from "@/utils/data";
 import Image from "next/image";
 
-type PlaygroundItemProps = {
+type MoreWorksItemProps = {
   name: string;
   image: string;
   delay: number;
 };
 
-const PlaygroundItem = ({ name, image, delay }: PlaygroundItemProps) => {
+const MoreWorksItem = ({ name, image, delay }: MoreWorksItemProps) => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
@@ -46,7 +46,7 @@ const PlaygroundItem = ({ name, image, delay }: PlaygroundItemProps) => {
   );
 };
 
-const Playground: React.FC = () => {
+const MoreWorks: React.FC = () => {
   const headerRef = React.useRef(null);
   const isHeaderInView = useInView(headerRef, { once: true, amount: 0.6 });
 
@@ -71,9 +71,9 @@ const Playground: React.FC = () => {
         </p>
       </motion.div>
       <div className="px-0 w-full flex-1 flex flex-col md:flex-row items-row gap-6 md:gap-3">
-        {playgroundData.map((item, index) => (
+        {moreWorksData.map((item, index) => (
           <div className="w-full" key={item.id}>
-            <PlaygroundItem
+            <MoreWorksItem
               image={item.image}
               name={item.title}
               delay={0.1 + index * 0.1}
@@ -85,4 +85,4 @@ const Playground: React.FC = () => {
   );
 };
 
-export default Playground;
+export default MoreWorks;

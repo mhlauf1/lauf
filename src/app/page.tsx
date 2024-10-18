@@ -1,7 +1,7 @@
 import RecentWorks from "@/components/RecentWorks";
 import TextBanner from "@/components/TextBanner";
 import Expertise from "@/components/Expertise";
-import Playgorund from "@/components/Playground";
+import MoreWorks from "@/components/MoreWorks";
 import HowItWorks from "@/components/HowItWorks";
 import Pricing from "@/components/Pricing";
 import CTA from "@/components/CTA";
@@ -19,7 +19,7 @@ export default function Home() {
       <HowItWorks />
       <Pricing />
       <Testimonials />
-      <Playgorund />
+      <MoreWorks />
       <Team />
       <CTA />
     </main>

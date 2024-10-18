@@ -1,6 +1,5 @@
 import React from "react";
-import Image from "next/image";
-import FormModal from "./FormModal";
+import { IoIosArrowForward } from "react-icons/io";
 
 const CTA = () => {
   return (
@@ -12,17 +11,15 @@ const CTA = () => {
         Let&apos;s create something great together—start today!
       </p>
       <div className="mt-4">
-        <FormModal isCTA={true} />
-      </div>
-      <div className="h-auto hidden md:block absolute bottom-12 right-12 opacity-50 w-[56px]">
-        <Image
-          src="/white-text.png"
-          alt="Brady Digital Consulting Logo"
-          layout="responsive"
-          width={56}
-          height={40}
-          objectFit="cover"
-        />
+        <a
+          href="https://www.honeybook.com/widget/lauf_283541/cf_id/6703e04b7b400700392b6ee8"
+          target="_blank"
+        >
+          <button className="bg-neutral-50 hover:bg-white text-[#4782ed] mt-4 duration-300 flex items-center gap-4 font-semibold rounded-full py-4 px-8 ">
+            Let&apos;s work together
+            <IoIosArrowForward />
+          </button>
+        </a>
       </div>
     </section>
   );

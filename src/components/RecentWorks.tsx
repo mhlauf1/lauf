@@ -53,8 +53,18 @@ const WorkItem = ({
         </div>
       </div>
       <Link target="_blank" className="relative group" href={link}>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 rounded-lg w-full bg-[#F1EDEA] px-4 py-12 md:px-12 lg:py-36">
-          <div className="w-full md:w-1/3  rounded-lg overflow-hidden shadow-md">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 rounded-lg w-full ">
+          <div className="w-full  rounded-lg overflow-hidden shadow-md">
+            <Image
+              src={screenshots[0]}
+              layout="responsive"
+              width={16}
+              height={9}
+              objectFit="cover"
+              alt={`${name} screenshot 1`}
+            />
+          </div>
+          {/* <div className="w-full md:w-1/3  rounded-lg overflow-hidden shadow-md">
             <Image
               src={screenshots[0]}
               layout="responsive"
@@ -84,7 +94,7 @@ const WorkItem = ({
               objectFit="cover"
               alt={`${name} screenshot 2`}
             />
-          </div>
+          </div> */}
         </div>
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-end p-4 justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
           <span className="text-white text-2xl font-semibold">

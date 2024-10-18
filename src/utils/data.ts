@@ -5,7 +5,7 @@ export const recentWorkData = [
         tags: ["Web Design", "Web Development", "Content Creation", "Asset Creation", "SEO", "Hosting"],
         video: "/brady-home.mov",
         link: "https://www.bradydigitalconsulting.com",
-        screenshots: ["/brady-1.png", "/brady-2.png", "/brady-3.png", "/brady-4.png", "/brady-5.png",]
+        screenshots: ["/brady-thumbnail.png", "/brady-2.png", "/brady-3.png", "/brady-4.png", "/brady-5.png",]
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ export const recentWorkData = [
         tags: ["Web Design", "Web Development", "Content Creation", "SEO", "Hosting",],
         video: "/cpc-video.mov",
         link: "https://www.cadenceprivatecapital.com",
-        screenshots: ["/cpc-1.png", "/cpc-2.png",]
+        screenshots: ["/cadence-thumbnail.png", "/cpc-2.png",]
     },
 
     {
@@ -22,89 +22,11 @@ export const recentWorkData = [
         tags: ["Web Design", "Web Development", "Content Creation", "Form Collection", "Hosting"],
         video: "/cam.mov",
         link: "https://www.clareandmikewedding.com",
-        screenshots: ["/cam.png", "/cam2.png",]
+        screenshots: ["/cam-thumbnail.png", "/cam2.png",]
     },
 ];
 
-export const designData = {
-    title: "Design",
-    services: [
-        {
-            id: 0,
-            title: "Website Design",
-        },
-        {
-            id: 1,
-            title: "Mobile Responsive Design",
-        },
-        {
-            id: 2,
-            title: "Interactive Animations",
-        },
-        {
-            id: 3,
-            title: "Figma Prototypes",
-        },
-        {
-            id: 4,
-            title: "A/B Testing",
-        },
-        {
-            id: 5,
-            title: "Asset Creation",
-        },
-    ],
-};
-
-export const devData = {
-    title: "Developent",
-    services: [
-        {
-            id: 0,
-            title: "Full-Scale Websites",
-        },
-        {
-            id: 1,
-            title: "Landing Pages",
-        },
-        {
-            id: 2,
-            title: "App Integrations & APIs",
-        },
-        {
-            id: 3,
-            title: "Forms & Data Collection",
-        },
-        {
-            id: 4,
-            title: "SEO Optimization",
-        },
-        {
-            id: 5,
-            title: "Hosting Solutions",
-        },
-    ],
-};
-
-export const contentData = {
-    title: "Content & Assets Creation",
-    services: [
-        {
-            id: 0,
-            title: "Website Copywriting",
-        },
-        {
-            id: 1,
-            title: "Custom Images & Videos",
-        },
-        {
-            id: 2,
-            title: "Infographics & Visual Storytelling",
-        },
-    ],
-};
-
-export const playgroundData = [
+export const moreWorksData = [
     {
         id: 0,
         image: "/full-1.png",
@@ -122,69 +44,24 @@ export const howItWorksSteps = [
         title: "Step 1: Discovery & Strategy Call",
         description:
             "Fill out our intake form, then we connect for a strategy call to discuss your goals, challenges, and how a website can solve them. Together, we create a clear plan for success.",
-        image: "/brady-1.png",
     },
     {
         title: "Step 2: Custom Design Solution",
         description:
             "We design a website tailored to your business needs and goals, focusing on both aesthetics and functionality to ensure it captures attention and drives results.",
-        image: "/brady-1.png",
     },
     {
         title: "Step 3: Development & Build",
         description:
             "Once the design is approved, we bring it to life with a fully functional website, ensuring smooth performance, responsiveness, and scalability.",
-        image: "/brady-1.png",
     },
     {
         title: "Step 4: Launch & Ongoing Support",
         description:
             "After testing and optimizing your site, we launch it and provide ongoing updates, monitoring, and maintenance to keep your website performing at its best.",
-        image: "/brady-1.png",
     },
 ];
 
-export const problemData = [
-    {
-        id: 1,
-        name: "One-Size-Fits-All Design",
-        description: "Generic designs that don't reflect your brand.",
-        tags: ["No personalization", "Lack of brand identity", "Dated templates", "Overused layouts", "Forgettable experience",]
-    },
-    {
-        id: 2,
-        name: "Confusing User Experience",
-        description: "Poor navigation frustrates and loses users.",
-        tags: ["Hard-to-find info", "Clunky navigation", "Slow page load times", "Unintuitive layout", "High bounce rate"]
-    },
-    {
-        id: 3,
-        name: "Limited Functionality",
-        description: "Rigid websites that stifle growth.",
-        tags: ["Outdated features", "No scalability", "Incompatible plugins", "Mobile issues", "Difficult to update",]
-    },
-];
-
-export const solutionData = [
-    {
-        id: 1,
-        name: "Tailored for Your Business",
-        description: "Custom designs that align with your goals.",
-        tags: ["Unique brand identity", "Creative, structured layouts", "Goal-driven design", "Personalized user experience", "Strategic visual impact",]
-    },
-    {
-        id: 2,
-        name: "Built for the Future",
-        description: "Optimized for any device and ready to grow.",
-        tags: ["Mobile-first design", "Scalable architecture", "Cross-device compatibility", "Adaptive to trends", "Future-proof features"]
-    },
-    {
-        id: 3,
-        name: "Fast & Ongoing Support",
-        description: "Reliable service with continuous care.",
-        tags: ["Quick loading speeds", "Proactive maintenance", "Regular updates", "Hands-on support", "Long-term partnership",]
-    },
-];
 export const pricingData = [
     {
         id: 1,
