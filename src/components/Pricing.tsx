@@ -34,26 +34,26 @@ const PricingTier: React.FC<PricingOption & { delay: number }> = ({
       ref={ref}
       {...animationProps}
       whileHover={{ scale: 1.01, opacity: 1 }}
-      className={`flex flex-col h-full border shadow-md rounded-2xl px-6 md:px-8 py-12 justify-between flex-1 items-start gap-2 ${
+      className={`flex flex-col h-full border shadow-md rounded-2xl px-6 md:px-[5%] py-12 justify-between flex-1 items-start gap-2 ${
         featured ? "bg-neutral-950" : ""
       }`}
     >
-      <div className="flex flex-col mt-8  w-full gap-2 items-start">
+      <div className="flex flex-col  w-full gap-1 items-start">
         <h4
-          className={`font-medium text-3xl md:text-4xl ${
+          className={`font-medium text-2xl md:text-3xl ${
             featured ? "text-neutral-50" : "text-neutral-800"
-          } h-16 md:h-20 flex items-center`} // Added fixed height
+          } h-auto md:h-20 flex items-center`} // Added fixed height
         >
           {name}
         </h4>
         <p
-          className={`w-full md:w-[30ch] text-md md:text-lg mt-2 leading-[140%] ${
+          className={`w-full md:w-[30ch] text-md md:text-lg leading-[140%] ${
             featured ? "text-neutral-200" : "text-neutral-600"
-          } h-auto md:h-28`} // Added fixed height
+          } h-auto md:h-24`} // Added fixed height
         >
           {description}
         </p>
-        <div className="flex flex-col md:items-center w-full my-6 md:my-10 gap-2">
+        <div className="flex flex-col md:items-center mt-6 md:mt-0 w-full mb-2 gap-2">
           <span
             className={`text-md md:text-xl tracking-tight ${
               featured ? "text-neutral-300" : "text-neutral-700"
@@ -61,17 +61,14 @@ const PricingTier: React.FC<PricingOption & { delay: number }> = ({
           >
             Starting at
           </span>
-          {/* <div className="flex flex-row gap-1 items-end"> */}
           <h2
-            className={`text-4xl md:text-6xl mt-2 font-semibold ${
+            className={`text-4xl md:text-5xl mt-2 font-semibold ${
               featured ? "text-neutral-200" : ""
             }`}
           >
             ${price}
           </h2>
-          {/* <span className="text-xs">+tax</span> */}
         </div>
-        {/* </div> */}
         <p
           className={`text-sm md:text-md mb-2 md:mb-4 ${
             featured ? "text-neutral-300" : "text-neutral-600"
@@ -83,11 +80,14 @@ const PricingTier: React.FC<PricingOption & { delay: number }> = ({
           {tags.map((item) => (
             <div
               key={item}
-              className={`flex flex-row items-center gap-3 ${
+              className={`flex flex-row items-center gap-2 md:gap-3 ${
                 featured ? "text-neutral-300" : "text-neutral-600"
               }`}
             >
-              <IoCheckmarkCircleOutline color="#4782ed" size={24} />
+              <IoCheckmarkCircleOutline
+                color="#4782ed"
+                className="h-[18px] w-[18px] md:h-[24px] md:w-[24px]"
+              />
               <p>{item}</p>
             </div>
           ))}
@@ -155,7 +155,7 @@ const Pricing: React.FC = () => {
           Designed for individuals and teams!
         </motion.span>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3  mt-4 w-full gap-8 md:gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3  mt-4 w-full gap-8 md:gap-4">
         {pricingData.map((option, index) => (
           <div className="flex flex-1" key={option.id}>
             <PricingTier
@@ -174,10 +174,11 @@ const Pricing: React.FC = () => {
         {...spanAnimationProps}
         className="flex mt-8  justify-center"
       >
-        <span className="md:w-[42ch]  text-center text-neutral-600">
+        <span className="md:w-[52ch]  text-center text-neutral-600">
           For ongoing website maintenance, hosting assistance and updates, we
           provide 24/7 support for{" "}
-          <span className="underline">$59.99 per month.</span>
+          <span className="underline">$59.99 per month.</span> Taxes not
+          included.
         </span>
       </motion.div>
     </section>
