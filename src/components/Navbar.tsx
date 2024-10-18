@@ -112,7 +112,7 @@ export default function Navbar() {
               <Link
                 className="hover:text-neutral-500 transition"
                 onClick={toggleMenu}
-                href="/work"
+                href="#work"
               >
                 Projects
               </Link>
@@ -121,7 +121,7 @@ export default function Navbar() {
               <Link
                 className="hover:text-neutral-500 transition"
                 onClick={toggleMenu}
-                href="/how-it-works"
+                href="#how-it-works"
               >
                 How It Works
               </Link>
@@ -130,7 +130,7 @@ export default function Navbar() {
               <Link
                 className="hover:text-neutral-500 transition"
                 onClick={toggleMenu}
-                href="/pricing"
+                href="#pricing"
               >
                 Pricing
               </Link>
@@ -141,9 +141,14 @@ export default function Navbar() {
               </a>
             </p>
             <li>
-              <button className="bg-[#4782ed] hover:bg-[#5a91f5] mt-4 duration-300 flex items-center gap-4 font-semibold rounded-full py-4 px-8 text-white">
-                Get in touch
-              </button>
+              <a
+                href="https://www.honeybook.com/widget/lauf_283541/cf_id/6703e04b7b400700392b6ee8"
+                target="_blank"
+              >
+                <button className="bg-[#4782ed] hover:bg-[#5a91f5] mt-4 duration-300 flex items-center gap-4 font-semibold rounded-full py-4 px-8 text-white">
+                  Get in touch
+                </button>
+              </a>
             </li>
           </ul>
         </div>
