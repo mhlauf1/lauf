@@ -135,17 +135,17 @@ export const testimonialData = [
         },
         logo: "/cadence-logo.png"
     },
-    {
-        id: 1,
-        url: "https://www.bradydigitalconsulting.com",
-        quote: "Michael did an outstanding job on the website for Cadence Private Capital. He provided the service level of a top-tier web design and development at a very reasonable price. Additionally, the personal attention, availability, and attention to detail made this a great all-around experience. We highly recommend Michael for any website design or development services.",
-        client: {
-            image: "/jack-brady.png",
-            name: "Jack Brady",
-            position: "Brady Digital Consulting Co-Founder"
-        },
-        logo: "/brady-logo.png"
-    },
+    // {
+    //     id: 1,
+    //     url: "https://www.bradydigitalconsulting.com",
+    //     quote: "Michael did an outstanding job on the website for Cadence Private Capital. He provided the service level of a top-tier web design and development at a very reasonable price. Additionally, the personal attention, availability, and attention to detail made this a great all-around experience. We highly recommend Michael for any website design or development services.",
+    //     client: {
+    //         image: "/jack-brady.png",
+    //         name: "Jack Brady",
+    //         position: "Brady Digital Consulting Co-Founder"
+    //     },
+    //     logo: "/brady-logo.png"
+    // },
 ]
 
 export const teamData = [

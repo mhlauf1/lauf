@@ -32,9 +32,9 @@ const Footer = () => {
           <Link target="_blank" href="https://dribbble.com/laufco">
             <FaDribbble size={24} />
           </Link>
-          <Link href="/">
+          {/* <Link href="/">
             <FaTwitter size={24} />
-          </Link>
+          </Link> */}
         </div>
       </div>
     </footer>
