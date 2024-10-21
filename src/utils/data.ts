@@ -10,7 +10,7 @@ export const recentWorkData = [
     {
         id: 2,
         name: "Cadence Private Capital",
-        tags: ["Web Design", "Web Development", "Content Creation", "SEO", "Hosting",],
+        tags: ["Web Design", "Web Development", "Content Creation", "Asset Creation", "SEO", "Hosting",],
         video: "/cpc-video.mov",
         link: "https://www.cadenceprivatecapital.com",
         screenshots: ["/cadence-thumbnail.png", "/cpc-2.png",]
