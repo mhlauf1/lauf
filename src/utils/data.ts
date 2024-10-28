@@ -69,7 +69,7 @@ export const pricingData = [
         price: 1000,
         featured: false,
         description: "Perfect for businesses that only need a professional design.",
-        tags: ["Custom Website Design", "Responsive Layouts Across Devices", "SEO-Optimized Design Structure", "Figma Prototypes for Preview", "Unlimited Design Revisions",]
+        tags: ["Custom Website Design", "Responsive Layouts Across Devices", "SEO Focused Structure", "Figma Prototypes for Preview", "5 Design Revisions",]
     },
     {
         id: 2,
