@@ -94,7 +94,7 @@ export const expertiseData = [
         id: 1,
         name: "Website Development",
         image: "/dev-main-pic.png",
-        tags: ["Full Scale Websites", "Landing Pages", "App Integrations & APIs", "Forms & Data Collection", "SEO Optimization", "Hosting Solutions", "Analytics",]
+        tags: ["Full Scale Websites", "Landing Pages", "App Integrations & APIs", "Forms & Data Collection", "SEO", "Hosting Solutions", "Analytics",]
     },
     {
         id: 2,

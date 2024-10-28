@@ -48,7 +48,7 @@ const Hero = () => {
           </button>
         </a>
       </div>
-      <div className="w-full mt-12 md:mt-20">
+      <div className="w-full mt-12 md:mt-36">
         <HeroCarousel images={heroImages} />
       </div>
     </motion.section>

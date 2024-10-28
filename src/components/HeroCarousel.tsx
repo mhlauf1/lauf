@@ -17,7 +17,7 @@ interface HeroCarouselProps {
 const HeroCarousel: React.FC<HeroCarouselProps> = ({ images }) => {
   const isDesktop = useIsDesktop(); // Determine if the screen is desktop size
 
-  const baseVelocity = isDesktop ? -2.5 : -6.5; // Adjust this value to change the speed
+  const baseVelocity = isDesktop ? -3.5 : -6.5; // Adjust this value to change the speed
   const baseX = useMotionValue(0);
   const x = useTransform(baseX, (v) => `${v}%`);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -48,16 +48,13 @@ const HeroCarousel: React.FC<HeroCarouselProps> = ({ images }) => {
     <div className="overflow-hidden">
       <motion.div ref={containerRef} className="flex" style={{ x }}>
         {images.concat(images).map((src, index) => (
-          <div
-            key={index}
-            className="flex-shrink-0 flex items-end w-64 h-48 md:w-76 md:h-64 mx-2"
-          >
+          <div key={index} className="flex-shrink-0 flex items-end  mx-2">
             <Image
               src={src}
               alt={`Carousel image ${index + 1}`}
-              width={350}
-              height={200}
-              className="object-cover rounded-lg"
+              width={450}
+              height={300}
+              className="object-cover w-auto md:h-[250px]  h-[225px]  rounded-md"
             />
           </div>
         ))}
