@@ -8,9 +8,7 @@ const Footer = () => {
   return (
     <footer className="flex md:flex-row flex-col-reverse gap-8 items-center justify-between w-full py-12 px-4 md:px-20 lg:px-36">
       <div className="flex flex-1">
-        <p className="text-sm text-neutral-500">
-          © Lauf Co. All rights reserved
-        </p>
+        <p className="text-sm text-neutral-500">© Lauf. All rights reserved</p>
       </div>
       <div className="flex justify-center flex-1">
         <div className="h-auto w-[48px] md:w-[56px]">

@@ -177,8 +177,7 @@ const Pricing: React.FC = () => {
         <span className="md:w-[52ch]  text-center text-neutral-600">
           For ongoing website maintenance, hosting assistance and updates, we
           provide 24/7 support for{" "}
-          <span className="underline">$59.99 per month.</span> Taxes not
-          included.
+          <span className="underline">$59.99 per month.</span>
         </span>
       </motion.div>
     </section>
