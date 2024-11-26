@@ -24,6 +24,13 @@ const Footer = () => {
       </div>
       <div className="flex  text-neutral-800 justify-end flex-1">
         <div className="flex flex-row items-center gap-3 md:gap-4">
+          <Link
+            target="_blank"
+            className="text-sm text-neutral-500"
+            href="https://www.freeprivacypolicy.com/live/cccd5a99-7062-45b2-ad92-67711ce00348"
+          >
+            <p>Privacy Policy</p>
+          </Link>
           <Link target="_blank" href="https://www.linkedin.com/company/laufco/">
             <FaLinkedin size={24} />
           </Link>
