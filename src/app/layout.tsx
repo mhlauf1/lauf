@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Head from "next/head";
+import { JsonLd } from "@/components/JsonLd";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -17,18 +18,60 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://lauf.co"),
   title: {
-    default: "Lauf - Website Design & Development Company",
-    template: "%s - Lauf - Website Design & Development",
+    default: "Lauf | Professional Web Design & Development",
+    template: "%s | Lauf",
   },
-  description: "Professional web design and development services by Lauf.",
+  description:
+    "Professional web design and development services by Lauf. Expert website solutions for modern businesses.",
+  keywords: [
+    "Lauf",
+    "web design",
+    "web development",
+    "digital agency",
+    "website design",
+    "Chicago",
+  ],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://lauf.co",
+    siteName: "Lauf",
+    title: "Lauf | Professional Web Design & Development",
+    description: "Professional web design and development services by Lauf",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Lauf Web Design & Development",
+      },
+    ],
+  },
   twitter: {
     card: "summary_large_image",
+    title: "Lauf | Professional Web Design & Development",
+    description: "Professional web design and development services by Lauf",
+    images: ["/opengraph-image.png"],
   },
-  openGraph: {
-    images: "/opengraph-image.png",
+  verification: {
+    google: "google5090f974ab070b62",
   },
-  keywords: "Lauf, web design, development, website, Chicago",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://lauf.co",
+  },
 };
 
 export default function RootLayout({
@@ -38,12 +81,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <meta
-          name="google-site-verification"
-          content="BEaUF1hQ50xW7pT-B1zxzSCo0Ud5FQbvu3ej5HBEjJI"
-        />
-      </Head>
+      <head>
+        <JsonLd />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable}  overflow-x-hidden antialiased`}
       >
