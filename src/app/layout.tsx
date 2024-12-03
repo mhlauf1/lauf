@@ -19,7 +19,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL("https://lauf.co"),
   title: {
-    default: "Lauf | Professional Web Design & Development",
+    default: "Lauf | Web Design & Development",
     template: "%s | Lauf",
   },
   description:
