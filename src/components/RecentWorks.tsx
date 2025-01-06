@@ -9,7 +9,6 @@ type WorkItemProps = {
   name: string;
   tags: string[];
   delay: number;
-  video: string;
   screenshots: string[];
   link: string;
 };
@@ -102,7 +101,6 @@ const RecentWorks: React.FC = () => {
               name={item.name}
               tags={item.tags}
               delay={0.1 + index * 0.1}
-              video={item.video}
               screenshots={item.screenshots}
               link={item.link}
             />

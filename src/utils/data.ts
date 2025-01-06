@@ -1,9 +1,15 @@
 export const recentWorkData = [
     {
+        id: 0,
+        name: "The Body Biz",
+        tags: ["Web Design", "Web Development", "Payroll Management", "Automation", "SEO", "Hosting"],
+        link: "https://www.thebody.biz/",
+        screenshots: ["/tbb-thumbnail.png", "/brady-2.png", "/brady-3.png", "/brady-4.png", "/brady-5.png",]
+    },
+    {
         id: 1,
         name: "Brady Digital Consulting",
         tags: ["Web Design", "Web Development", "Content Creation", "Asset Creation", "SEO", "Hosting"],
-        video: "/brady-home.mov",
         link: "https://www.bradydigitalconsulting.com",
         screenshots: ["/brady-thumbnail.png", "/brady-2.png", "/brady-3.png", "/brady-4.png", "/brady-5.png",]
     },
@@ -20,7 +26,6 @@ export const recentWorkData = [
         id: 3,
         name: "Clare and Mike Wedding",
         tags: ["Web Design", "Web Development", "Content Creation", "Form Collection", "Hosting"],
-        video: "/cam.mov",
         link: "https://www.clareandmikewedding.com",
         screenshots: ["/cam-thumbnail.png", "/cam2.png",]
     },
@@ -108,9 +113,12 @@ export const expertiseData = [
 
 export const heroImages = [
     "/design-7.png",
+    "/tbb-2.png",
     "/design-4.png",
     "/design-8.png",
+    "/tbb-3.png",
     "/design-9.png",
+    "/tbb-1.png",
     "/design-1.png",
     "/design-11.png",
     "/design-12.png",
