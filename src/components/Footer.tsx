@@ -15,7 +15,9 @@ const Footer = () => {
         <p>Privacy Policy</p>
       </Link>
       <div className="flex flex-1">
-        <p className="text-sm text-neutral-500">© Lauf. All rights reserved</p>
+        <p className="text-sm text-neutral-500">
+          © Lauf 2025. All rights reserved
+        </p>
       </div>
       <div className="flex justify-center flex-1">
         <div className="h-auto w-[48px] md:w-[56px]">
