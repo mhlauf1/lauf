@@ -2,7 +2,7 @@ export const recentWorkData = [
     {
         id: 0,
         name: "The Body Biz",
-        tags: ["Web Design", "Web Development", "Payroll Management", "Automation", "SEO", "Hosting"],
+        tags: ["Web Design", "Webflow Development", "Payroll Management", "Automation", "SEO", "Hosting"],
         link: "https://www.thebody.biz/",
         screenshots: ["/tbb-thumbnail.png", "/brady-2.png", "/brady-3.png", "/brady-4.png", "/brady-5.png",]
     },
