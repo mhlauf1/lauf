@@ -21,7 +21,7 @@ const Hero = () => {
         <div className="flex items-center mb-8 bg-neutral-100 bg-opacity-80 backdrop-blur-sm text-sm rounded-full py-1.5 px-4 gap-2">
           <div className="bg-[#4782ed] rounded-full h-1.5 w-1.5"></div>
           <span className="text-neutral-600 text-md md:text-lg">
-            Available for February Projects
+            Available for March Projects
           </span>
         </div>
         <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight text-center capitalize">
