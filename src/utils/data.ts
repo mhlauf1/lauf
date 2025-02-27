@@ -1,33 +1,32 @@
 export const recentWorkData = [
     {
         id: 0,
-        name: "The Body Biz",
-        tags: ["Web Design", "Webflow Development", "Payroll Management", "Automation", "SEO", "Hosting"],
+        name: "Embark Pet Services",
+        tags: ["Web Design", "Webflow Development", "Content Creation", "Asset Creation", "SEO", "Hosting"],
         link: "https://www.thebody.biz/",
-        screenshots: ["/tbb-thumbnail.png", "/brady-2.png", "/brady-3.png", "/brady-4.png", "/brady-5.png",]
+        screenshots: ["/embark.png",]
     },
     {
         id: 1,
+        name: "The Body Biz",
+        tags: ["Web Design", "Webflow Development", "Payroll Management", "Automation", "SEO", "Hosting"],
+        link: "https://www.embarkpetservices.com/",
+        screenshots: ["/tbb-thumbnail.png", "/brady-2.png", "/brady-3.png", "/brady-4.png", "/brady-5.png",]
+    },
+    {
+        id: 2,
         name: "Brady Digital Consulting",
         tags: ["Web Design", "Web Development", "Content Creation", "Asset Creation", "SEO", "Hosting"],
         link: "https://www.bradydigitalconsulting.com",
         screenshots: ["/brady-thumbnail.png", "/brady-2.png", "/brady-3.png", "/brady-4.png", "/brady-5.png",]
     },
     {
-        id: 2,
+        id: 3,
         name: "Cadence Private Capital",
         tags: ["Web Design", "Web Development", "Content Creation", "Asset Creation", "SEO", "Hosting",],
         video: "/cpc-video.mov",
         link: "https://www.cadenceprivatecapital.com",
         screenshots: ["/cadence-thumbnail.png", "/cpc-2.png",]
-    },
-
-    {
-        id: 3,
-        name: "Clare and Mike Wedding",
-        tags: ["Web Design", "Web Development", "Content Creation", "Form Collection", "Hosting"],
-        link: "https://www.clareandmikewedding.com",
-        screenshots: ["/cam-thumbnail.png", "/cam2.png",]
     },
 ];
 
