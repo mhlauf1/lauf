@@ -3,7 +3,7 @@ export const recentWorkData = [
         id: 0,
         name: "Embark Pet Services",
         tags: ["Web Design", "Webflow Development", "Content Creation", "Asset Creation", "SEO", "Hosting"],
-        link: "https://www.thebody.biz/",
+        link: "https://www.embarkpetservices.com/",
         screenshots: ["/embark.png",]
     },
     {
@@ -113,14 +113,18 @@ export const expertiseData = [
 export const heroImages = [
     "/design-7.png",
     "/tbb-2.png",
+    "/embark-2.png",
     "/design-4.png",
     "/design-8.png",
+    "/embark-1.png",
     "/tbb-3.png",
     "/design-9.png",
     "/tbb-1.png",
+    "/embark-3.png",
     "/design-1.png",
     "/design-11.png",
     "/design-12.png",
+    "/embark-4.png",
     "/design-2.png",
     "/design-3.png",
     "/design-13.png",
