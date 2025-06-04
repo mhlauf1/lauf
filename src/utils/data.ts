@@ -10,7 +10,7 @@ export const recentWorkData = [
         id: 1,
         name: "The Body Biz",
         tags: ["Web Design", "Webflow Development", "Payroll Management", "Automation", "SEO", "Hosting"],
-        link: "https://www.embarkpetservices.com/",
+        link: "https://www.thebody.biz/",
         screenshots: ["/tbb-thumbnail.png", "/brady-2.png", "/brady-3.png", "/brady-4.png", "/brady-5.png",]
     },
     {
