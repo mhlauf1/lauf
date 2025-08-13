@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
             duration: 1,
             ease: "power2.out",
           },
-          "-=0.5"
+          "-=0.75"
         )
         .from(
           ".hero-button",
@@ -93,7 +93,7 @@ const Hero: React.FC = () => {
             duration: 0.9,
             ease: "power2.out",
           },
-          "-=1.35"
+          "-=1.05"
         )
         .from(
           ".right-column",
@@ -113,7 +113,7 @@ const Hero: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 7000); // Change slide every 7 seconds
+    }, 8000); // Change slide every 7 seconds
 
     return () => clearInterval(interval); // Clean up on unmount
   }, []);
