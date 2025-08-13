@@ -8,5 +8,26 @@ html {
 }
 
 body {
+}
+body {
   overflow-x: hidden;
+  color: #282725;
+}
+
+.font-medium {
+  font-family: var(-font-sf-regular-sans);
+}
+
+.font-instrument {
+  font-family: var(--font-instrument);
+}
+
+.line-parent {
+  overflow: hidden;
+  padding-bottom: 0.1em; /* critical to avoid clipping descenders */
+}
+
+.line-child {
+  display: inline-block;
+  will-change: transform;
 }

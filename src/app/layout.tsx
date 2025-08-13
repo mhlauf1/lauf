@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
 import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,7 +32,10 @@ export const metadata: Metadata = {
     "web development",
     "digital agency",
     "website design",
-    "Chicago",
+    "Madison websites",
+    "Madison website design",
+    "Madison web development",
+    "Madison website development",
   ],
   openGraph: {
     type: "website",
@@ -82,10 +86,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-R6KMRM4RXK"
+        ></Script>
+        <Script id="google-analytics">
+          {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R6KMRM4RXK');
+    `}
+        </Script>
         <JsonLd />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable}  overflow-x-hidden antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} relative  overflow-x-hidden antialiased`}
       >
         <Navbar />
         {children}

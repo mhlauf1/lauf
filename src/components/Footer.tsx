@@ -20,16 +20,9 @@ const Footer = () => {
         </p>
       </div>
       <div className="flex justify-center flex-1">
-        <div className="h-auto w-[48px] md:w-[56px]">
-          <Image
-            src="/black-text.png"
-            alt="Brady Digital Consulting Logo"
-            layout="responsive"
-            width={56}
-            height={40}
-            objectFit="cover"
-          />
-        </div>
+        <h2 className="font-black uppercase text-lg text-black tracking-tight">
+          Lauf
+        </h2>
       </div>
       <div className="flex  text-neutral-800 justify-end flex-1">
         <div className="flex flex-row items-center gap-3 md:gap-4">
