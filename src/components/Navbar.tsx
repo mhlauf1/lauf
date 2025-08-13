@@ -3,7 +3,7 @@ export default function Navbar() {
     <header className=" z-50  w-full flex flex-col">
       <div className="bg-[#6a59ff] h-2 w-full"></div>
       <nav className="bg-white w-full">
-        <div className="flex pb-4  border-b px-8 bg-neutral-900 md:px-12 border-neutral-600 flex-row ] flex-1 items-center justify-between pt-4">
+        <div className="flex pb-4  border-b px-4 bg-neutral-900 md:px-12 border-neutral-600 flex-row flex-1 items-center justify-between pt-4">
           <div className="flex">
             <a href="/">
               <h2 className="font-black uppercase text-white tracking-tight">

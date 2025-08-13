@@ -27,10 +27,10 @@ const HomeCTA = () => {
         borderTopColor: isInView ? "#3b3a38" : "#e5e5e5",
       }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
-      className="px-[4%] flex flex-col py-16"
+      className="px-[4%] flex flex-col py-4 md:py-16"
     >
       <div className="flex w-full gap-1 flex-col justify-center items-center py-24">
-        <h2 className="capitalize text-center text-4xl md:text-[6vw] max-w-[16ch] md:leading-[.95] font-light tracking-tight text-inherit">
+        <h2 className="capitalize text-center text-4xl md:text-[6vw] max-w-[16ch] md:leading-[1.2] font-light tracking-tight text-inherit">
           Lauf helps companies stand out online
         </h2>
         <div className="mt-5 md:mt-12">

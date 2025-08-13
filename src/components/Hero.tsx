@@ -90,21 +90,20 @@ const Hero: React.FC = () => {
           {
             y: 20,
             opacity: 0,
-            duration: 0.8,
+            duration: 0.9,
             ease: "power2.out",
           },
-          "-=0.8"
+          "-=1.35"
         )
         .from(
           ".right-column",
           {
             x: 50,
             opacity: 0,
-            delay: 0.2,
             duration: 1,
             ease: "power2.out",
           },
-          "-=1.2"
+          "-=1"
         );
     },
     { scope: container }

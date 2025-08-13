@@ -60,7 +60,7 @@ const OurSolutions: React.FC = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".headline-container",
-          start: "top 80%", // Start animation when the section is 80% from the top
+          start: "top 90%", // Start animation when the section is 80% from the top
         },
       });
 
@@ -91,7 +91,7 @@ const OurSolutions: React.FC = () => {
         const cardTl = gsap.timeline({
           scrollTrigger: {
             trigger: solution,
-            start: "top 85%",
+            start: "top 90%", // Changed to 90% to trigger earlier
             once: true,
           },
         });
@@ -110,17 +110,17 @@ const OurSolutions: React.FC = () => {
               duration: 0.7,
               ease: "power2.out",
             },
-            "-=0.6"
+            "-=0.7"
           )
           .from(
             solution.querySelector(".solution-span"),
             { y: 20, opacity: 0, duration: 0.6, ease: "power2.out" },
-            "-=0.5"
+            "-=0.6"
           )
           .from(
             solution.querySelector(".solution-p"),
             { y: 20, opacity: 0, duration: 0.6, ease: "power2.out" },
-            "-=0.5"
+            "-=0.6"
           );
       });
     },
@@ -179,7 +179,7 @@ const OurSolutions: React.FC = () => {
                 </h3>
               </div>
               <div className="overflow-hidden mb-2 md:mb-3">
-                <span className="solution-span text-xs ms:text-sm uppercase font-mono">
+                <span className="solution-span text-xs ms:text-sm uppercase tracking-widest font-mono">
                   {item.time}
                 </span>
               </div>
