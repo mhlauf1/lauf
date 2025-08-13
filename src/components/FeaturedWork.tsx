@@ -159,7 +159,7 @@ const FeaturedWork: React.FC = () => {
                 rel="noopener noreferrer"
                 className="group"
               >
-                <div className="project-image relative w-full h-[60vh] overflow-hidden">
+                <div className="project-image relative w-full md:h-[60vh] overflow-hidden">
                   <img
                     src={project.imageSrc}
                     className="w-full h-full object-cover"
