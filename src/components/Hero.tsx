@@ -223,7 +223,7 @@ const Hero: React.FC = () => {
                       style={{ lineHeight: 1.35 }}
                       className="text-base  text-neutral-100 font-medium "
                     >
-                      "{item.quote}"
+                      &quot;{item.quote}&quot;
                     </p>
                     <div className="flex flex-col items-end mt-4">
                       <h4 className="font-medium tracking-tight text-neutral-200 text-right">
