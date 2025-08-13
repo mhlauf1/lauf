@@ -4,21 +4,6 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Define TypeScript props for the Button component
-interface ButtonProps {
-  children: React.ReactNode;
-  href: string;
-}
-
-const Button: React.FC<ButtonProps> = ({ children, href }) => (
-  <a
-    href={href}
-    className="bg-neutral-100 text-neutral-800 px-8 py-4 rounded-md tracking-tight duration-300 transition-colors"
-  >
-    {children}
-  </a>
-);
-
 // Define the structure for a project
 interface Project {
   href: string;
