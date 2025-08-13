@@ -4,6 +4,21 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+// Define TypeScript props for the Button component
+interface ButtonProps {
+  children: React.ReactNode;
+  href: string;
+}
+
+const Button: React.FC<ButtonProps> = ({ children, href }) => (
+  <a
+    href={href}
+    className="bg-neutral-100 text-neutral-800 px-8 py-4 rounded-md tracking-tight duration-300 transition-colors"
+  >
+    {children}
+  </a>
+);
+
 // Define the structure for a project
 interface Project {
   href: string;
@@ -86,39 +101,48 @@ const FeaturedWork: React.FC = () => {
         },
       });
 
-      // Find all project items and animate their text individually
-      const projects = gsap.utils.toArray<HTMLElement>(".project-item");
-      projects.forEach((project) => {
-        const h3 = project.querySelector(".project-title");
-        const p = project.querySelector(".project-subtext");
+      // Use GSAP's matchMedia for responsive animations
+      const mm = gsap.matchMedia();
 
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: project,
-            start: "30% center",
-            once: true,
-          },
-        });
+      mm.add(
+        {
+          isMobile: "(max-width: 767px)",
+          isDesktop: "(min-width: 768px)",
+        },
+        (context) => {
+          const { isMobile } = context.conditions as { isMobile: boolean };
 
-        // Animate the project title (h3)
-        tl.from(h3, {
-          yPercent: 110,
-          duration: 0.8,
-          ease: "power2.out",
-        });
+          const projects = gsap.utils.toArray<HTMLElement>(".project-item");
+          projects.forEach((project) => {
+            const h3 = project.querySelector(".project-title");
+            const p = project.querySelector(".project-subtext");
 
-        // Animate the project subtitle (p) shortly after
-        tl.from(
-          p,
-          {
-            y: 20,
-            opacity: 0,
-            duration: 0.7,
-            ease: "power2.out",
-          },
-          "-=0.5"
-        );
-      });
+            const tl = gsap.timeline({
+              scrollTrigger: {
+                trigger: project,
+                // Use a different start trigger based on the screen size
+                start: isMobile ? "top 85%" : "30% center",
+                once: true,
+              },
+            });
+
+            tl.from(h3, {
+              yPercent: 110,
+              duration: 0.8,
+              ease: "power2.out",
+            }).from(
+              p,
+              {
+                y: 20,
+                opacity: 0,
+                duration: 0.7,
+                ease: "power2.out",
+              },
+              "-=0.5"
+            );
+          });
+        }
+      );
     },
     { scope: container }
   );
@@ -139,7 +163,6 @@ const FeaturedWork: React.FC = () => {
           </h2>
         </div>
 
-        {/* Refactored to a single CSS Grid container for a clean, consistent layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 mt-12 px-4 md:px-12">
           {projectsData.map((project, index) => (
             <div key={index} className="project-item flex flex-col">
