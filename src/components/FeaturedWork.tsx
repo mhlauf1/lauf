@@ -4,6 +4,21 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+// Define TypeScript props for the Button component
+interface ButtonProps {
+  children: React.ReactNode;
+  href: string;
+}
+
+const Button: React.FC<ButtonProps> = ({ children, href }) => (
+  <a
+    href={href}
+    className="bg-neutral-100 text-neutral-800 px-8 py-4 rounded-md tracking-tight duration-300 transition-colors"
+  >
+    {children}
+  </a>
+);
+
 // Define the structure for a project
 interface Project {
   href: string;
@@ -99,14 +114,16 @@ const FeaturedWork: React.FC = () => {
 
           const projects = gsap.utils.toArray<HTMLElement>(".project-item");
           projects.forEach((project) => {
+            // FIX: The trigger is now the text container, not the whole project item
+            const textContent = project.querySelector(".project-text-content");
             const h3 = project.querySelector(".project-title");
             const p = project.querySelector(".project-subtext");
 
             const tl = gsap.timeline({
               scrollTrigger: {
-                trigger: project,
+                trigger: textContent, // Trigger animation based on the text content
                 // Use a different start trigger based on the screen size
-                start: isMobile ? "top 85%" : "30% center",
+                start: isMobile ? "top 96%" : "top 95%",
                 once: true,
               },
             });
@@ -157,7 +174,7 @@ const FeaturedWork: React.FC = () => {
                 rel="noopener noreferrer"
                 className="group"
               >
-                <div className="project-image relative w-full md:h-[60vh] overflow-hidden">
+                <div className="project-image relative w-full h-[60vh] overflow-hidden">
                   <img
                     src={project.imageSrc}
                     className="w-full h-full object-cover"
@@ -170,15 +187,18 @@ const FeaturedWork: React.FC = () => {
                   </div>
                 </div>
               </a>
-              <div className="overflow-hidden mt-5">
-                <h3 className="project-title font-semibold uppercase text-xl md:text-2xl tracking-tight mb-1">
-                  {project.title}
-                </h3>
-              </div>
-              <div className="overflow-hidden">
-                <p className="project-subtext text-neutral-500 tracking-tight text-md md:text-lg">
-                  {project.description}
-                </p>
+              {/* This new container holds the text and acts as the animation trigger */}
+              <div className="project-text-content mt-5">
+                <div className="overflow-hidden">
+                  <h3 className="project-title font-semibold uppercase text-xl md:text-2xl tracking-tight mb-1">
+                    {project.title}
+                  </h3>
+                </div>
+                <div className="overflow-hidden">
+                  <p className="project-subtext text-neutral-500 tracking-tight text-md md:text-lg">
+                    {project.description}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
