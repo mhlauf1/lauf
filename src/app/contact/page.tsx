@@ -143,7 +143,7 @@ const ContactPage: React.FC = () => {
             <form onSubmit={handleSubmit} className="md:col-span-2 space-y-6">
               {success && (
                 <div className="bg-green-100 text-green-800 p-4 rounded-md">
-                  Thank you! We'll be in touch shortly.
+                  Thank you! We&apos;ll be in touch shortly.
                 </div>
               )}
               {error && (

@@ -1,23 +1,4 @@
-"use client";
-import { useState, useEffect } from "react";
-
 export default function Navbar() {
-  const [currentTime, setCurrentTime] = useState("");
-
-  useEffect(() => {
-    const updateTime = () => {
-      const time = new Date().toLocaleTimeString("en-US", {
-        hour: "numeric",
-        minute: "numeric",
-        hour12: true,
-      });
-      setCurrentTime(time);
-    };
-    updateTime();
-    const timerId = setInterval(updateTime, 60000);
-    return () => clearInterval(timerId);
-  }, []);
-
   return (
     <header className=" z-50  w-full flex flex-col">
       <div className="bg-[#6a59ff] h-2 w-full"></div>
