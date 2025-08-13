@@ -100,7 +100,7 @@ const Hero: React.FC = () => {
           {
             x: 50,
             opacity: 0,
-            delay: 0.5,
+            delay: 0.2,
             duration: 1,
             ease: "power2.out",
           },

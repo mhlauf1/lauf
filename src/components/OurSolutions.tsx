@@ -46,6 +46,12 @@ const OurSolutions: React.FC = () => {
     "operations so you can run things more efficiently.",
   ];
 
+  const subHeadlineMobile = [
+    "Our team is focused on solving your",
+    "challenges and streamlining operations so",
+    "you can run things more efficiently.",
+  ];
+
   useGSAP(
     () => {
       // Register the plugin inside the hook for reliability.
@@ -139,8 +145,17 @@ const OurSolutions: React.FC = () => {
               </h2>
             </div>
             <div className="flex items-end flex-row  justify-between">
-              <div className="flex flex-col">
+              <div className=" flex-col hidden md:block">
                 {subHeadlineLines.map((line, index) => (
+                  <div key={index} className="overflow-hidden">
+                    <p className="solution-sub-line tracking-tight text-lg md:text-xl md:max-w-[54ch]">
+                      {line}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <div className=" flex-col md:hidden block">
+                {subHeadlineMobile.map((line, index) => (
                   <div key={index} className="overflow-hidden">
                     <p className="solution-sub-line tracking-tight text-lg md:text-xl md:max-w-[54ch]">
                       {line}
@@ -151,7 +166,7 @@ const OurSolutions: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-1  gap-12 w-full  mt-20 md:grid-cols-4">
+        <div className="grid grid-cols-1  gap-12 w-full mt-12 md:mt-20 md:grid-cols-4">
           {solutionsData.map((item, index) => (
             <div
               key={index}
