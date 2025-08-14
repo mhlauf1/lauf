@@ -28,6 +28,11 @@ export const metadata: Metadata = {
     "Professional web design and development services by Lauf. Expert website solutions for modern businesses.",
   keywords: [
     "Lauf",
+    "Lauf websites",
+    "Lauf web design",
+    "website",
+    "SEO",
+    "SEO Madison",
     "web design",
     "web development",
     "digital agency",
