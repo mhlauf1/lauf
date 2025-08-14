@@ -119,7 +119,7 @@ const ContactPage: React.FC = () => {
         <div className="max-w-5xl mx-auto">
           {/* Header Section */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-light tracking-tight flex flex-wrap justify-center">
+            <h1 className="text-5xl sm:text-5xl md:text-7xl font-light tracking-tight flex flex-wrap justify-center">
               {headlineWords.map((word, index) => (
                 <span key={index} className="overflow-hidden py-1 mr-3">
                   <span className="contact-word inline-block">{word}</span>
@@ -210,7 +210,7 @@ const ContactPage: React.FC = () => {
             </form>
 
             {/* Contact Details */}
-            <div className="flex flex-col md:flex-row items-start md:items-center gap-8">
+            <div className="flex flex-col md:flex-row items-start md:justify-end gap-4 md:gap-8">
               <div>
                 <h3 className="font-semibold text-lg uppercase tracking-tight text-neutral-500">
                   Contact Details
