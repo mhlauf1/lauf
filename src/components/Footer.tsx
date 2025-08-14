@@ -4,7 +4,12 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="flex md:flex-row flex-col-reverse gap-3 md:gap-8 items-start md:items-center justify-between w-full py-8 md:py-12 px-4 md:px-20 lg:px-36">
+    <footer className="flex md:flex-row flex-col-reverse gap-4 md:gap-8 items-start md:items-center justify-between w-full py-8 md:py-12 px-4 md:px-20 lg:px-36">
+      <div className="md:hidden flex justify-center flex-1">
+        <h2 className="font-black uppercase text-base text-black tracking-tight">
+          Lauf
+        </h2>
+      </div>
       <div className="flex flex-1">
         <p className="text-sm text-neutral-500">
           © Lauf 2025. All rights reserved
@@ -17,7 +22,7 @@ const Footer = () => {
       >
         <p>Privacy Policy</p>
       </Link>
-      <div className="flex justify-center flex-1">
+      <div className="hidden md:flex justify-center flex-1">
         <h2 className="font-black uppercase text-lg text-black tracking-tight">
           Lauf
         </h2>
@@ -34,12 +39,6 @@ const Footer = () => {
           <Link target="_blank" href="https://www.linkedin.com/company/laufco/">
             <FaLinkedin size={24} />
           </Link>
-          {/* <Link target="_blank" href="https://dribbble.com/laufco">
-            <FaDribbble size={24} />
-          </Link> */}
-          {/* <Link href="/">
-            <FaTwitter size={24} />
-          </Link> */}
         </div>
       </div>
     </footer>
