@@ -24,7 +24,7 @@ const testimonials: Testimonial[] = [
   {
     image: "/mnmr-mockup.jpg",
     quote:
-      "Lauf transformed my run of the mill, self-made Wix website into a first class professional website. I couldn’t be happier with the website he created for me!",
+      "Lauf transformed my run of the mill, self-made Wix website into a first class professional website. I couldn’t be happier with the website they created for me!",
     name: "Adam Mott",
     company: "Minnesota Manufacturing Recruiting",
   },
