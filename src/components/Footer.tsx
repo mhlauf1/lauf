@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="flex md:flex-row flex-col-reverse gap-6 md:gap-8 items-start md:items-center justify-between w-full py-8 md:py-12 px-4 md:px-20 lg:px-36">
+    <footer className="flex md:flex-row flex-col-reverse gap-3 md:gap-8 items-start md:items-center justify-between w-full py-8 md:py-12 px-4 md:px-20 lg:px-36">
       <div className="flex flex-1">
         <p className="text-sm text-neutral-500">
           © Lauf 2025. All rights reserved

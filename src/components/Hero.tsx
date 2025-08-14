@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
   {
     image: "/cpc-new.png",
     quote:
-      "The personal attention, availability, and attention to detail made this a great all-around experience. We highly recommend Michael for any website design or development services.",
+      "The personal attention, availability, and attention to detail made this a great all-around experience. We highly recommend Lauf for any website design or development services.",
     name: "Peter Mark",
     company: "Cadence Private Capital",
   },
@@ -224,7 +224,7 @@ const Hero: React.FC = () => {
                     >
                       &quot;{item.quote}&quot;
                     </p>
-                    <div className="flex flex-col items-end mt-4">
+                    <div className="flex flex-col items-end mt-2">
                       <h4 className="font-medium tracking-tight text-neutral-200 text-right">
                         {item.name}
                       </h4>
