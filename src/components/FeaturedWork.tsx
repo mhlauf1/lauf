@@ -56,7 +56,7 @@ const projectsData: Project[] = [
       "Connecting top talent with leading manufacturers through a streamlined web platform.",
   },
   {
-    href: "https://www.strianoelectric.com/",
+    href: "https://strianoelectric.com/",
     imageSrc: "/striano-main.png",
     alt: "Striano Electric",
     title: "Striano Electric",
