@@ -175,7 +175,7 @@ const FeaturedWork: React.FC = () => {
               {/* This new container holds the text and acts as the animation trigger */}
               <div className="project-text-content mt-5">
                 <div className="overflow-hidden">
-                  <h3 className="project-title font-semibold uppercase text-xl md:text-2xl tracking-tight mb-1">
+                  <h3 className="project-title font-medium tracking-tight  text-xl md:text-2xl ">
                     {project.title}
                   </h3>
                 </div>
