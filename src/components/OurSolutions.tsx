@@ -16,25 +16,25 @@ const solutionsData: Solution[] = [
     title: "Strategy",
     time: "1 week",
     description:
-      "Clarify goals, uncover challenges, and map out a focused plan that shows exactly how your website will perform.",
+      "We begin by mapping out a strategic blueprint for your website. This collaborative process ensures we understand your goals and that every decision is purposeful from the very beginning.",
   },
   {
     title: "Design",
     time: "1–2 weeks",
     description:
-      "Create a unique visual identity with clean layouts, intuitive navigation, and a style that builds instant trust.",
+      "We translate our shared strategy into a beautiful and functional design. Through a collaborative process of mood boards and mockups, we refine the visual direction until it perfectly captures your brand's identity.",
   },
   {
     title: "Development",
     time: "1 week",
     description:
-      "Transform designs into a fast, responsive, and secure website built with modern code and best practices.",
+      "With the design finalized, we build your website with clean, high-performance code. You can review the progress on a private staging link, ensuring a transparent and fast development phase.",
   },
   {
     title: "Production",
     time: "Live",
     description:
-      "Launch, connect all tools, and fine-tune performance so the site attracts and converts from day one.",
+      "We manage the complete launch process to get your site live. Post-launch, we offer ongoing support to ensure your website remains a powerful and secure asset for your business.",
   },
 ];
 
@@ -42,8 +42,8 @@ const OurSolutions: React.FC = () => {
   const container = useRef<HTMLElement | null>(null);
   const headlineWords = "Our Solutions".split(" ");
   const subHeadlineLines = [
-    "Our team is focused on solving your challenges and streamlining",
-    "operations so you can run things more efficiently.",
+    "Our team is focused on solving your challenges and streamlining operations",
+    "so you can run things more efficiently.",
   ];
 
   const subHeadlineMobile = [
