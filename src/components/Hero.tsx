@@ -18,19 +18,19 @@ const Hero: React.FC = () => {
         />
         <div className="flex flex-col w-full px-4 md:px-[6%] justify-end pt-24 pb-8 flex-1">
           <h1 className="leading-[1.05] max-w-[12ch] tracking-tight text-white lg:text-[104px] text-[clamp(3.5rem,6vw,7.375rem)]">
-            Websites That Win Investors
+            Digital presence for capital firms
           </h1>
           <div className="flex flex-col">
-            <p className="text-neutral-100 md:max-w-[46ch] text-xl md:text-2xl mt-3">
-              We work with focused investment teams to create websites that
-              build trust, attract opportunities, and support long-term growth.
+            <p className="text-neutral-100 md:max-w-[53ch] text-xl md:text-2xl mt-3">
+              We work with focused investment and advisory teams to create
+              websites that build trust, attract opportunities, and support
+              long-term growth.
             </p>
-
             <div className="flex flex-col md:flex-row w-full md:items-end justify-between mt-8">
               <div className="">
                 <Link className="" href="/contact">
                   <button className="bg-white justify-between w-full flex gap-3 font-semibold items-center py-4 px-8 rounded-full">
-                    Launch An Investor-Ready Site
+                    Get started
                     <MdArrowOutward size={22} />
                   </button>
                 </Link>
@@ -45,19 +45,19 @@ const Hero: React.FC = () => {
             </div>
             <div className="bg-neutral-300 w-full h-[1px] my-6 md:my-12"></div>
             <div className="hidden md:block">
-              <p className="text-white">Recents</p>
+              <p className="text-white">Recent Clients</p>
               <div className="grid grid-cols-1 md:grid-cols-3 mt-2 gap-4">
                 <div className="bg-white/10 backdrop-blur rounded-md py-4 px-5 flex flex-col gap-1 justify-center">
-                  <span className="text-neutral-300">New Work</span>
+                  <span className="text-neutral-300">Website</span>
                   <p className="text-white text-xl">Stoc Advisory</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-md py-4 px-5 flex flex-col gap-1 justify-center">
-                  <span className="text-neutral-300">Client</span>
+                  <span className="text-neutral-300">Website</span>
                   <p className="text-white text-xl">Cadence Private Capital</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-md py-4 px-5 flex flex-col gap-1 justify-center">
-                  <span className="text-neutral-300">Coming Soon</span>
-                  <p className="text-white text-xl">Playbook</p>
+                  <span className="text-neutral-300">Website</span>
+                  <p className="text-white text-xl">Brady Digital Consulting</p>
                 </div>
               </div>
             </div>

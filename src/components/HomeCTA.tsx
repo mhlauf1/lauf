@@ -25,7 +25,7 @@ const HomeCTA = () => {
         <div className="mt-16 md:w-auto w-full md:mt-12">
           <Link href="/contact">
             <button className="bg-white w-full flex gap-2  justify-between font-semibold items-center py-4 px-8 rounded-full">
-              Launch An Investor-Ready Site
+              Get started
               <MdArrowOutward size={20} />
             </button>
           </Link>

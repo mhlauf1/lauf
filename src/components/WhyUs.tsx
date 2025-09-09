@@ -37,10 +37,10 @@ const WhyUs: React.FC = () => {
           </h2>
 
           <p className="mt-6 text-lg md:text-xl text-neutral-600 md:max-w-[68ch]">
-            Your site is designed to reflect your expertise, communicate clearly
-            to investors and founders, and position you for long-term growth.
-            Every build is fast, secure, and tailored to your needs, with
-            automations that save time and reduce friction.
+            Your site is designed to reflect your expertise, communicate clear
+            strategy, and position you for long-term growth. Every build is
+            fast, secure, and tailored to your needs, with automations that save
+            time and reduce friction.
           </p>
 
           <p className="mt-4 text-lg md:text-xl text-neutral-900 font-medium md:max-w-[68ch]">
