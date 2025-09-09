@@ -8,9 +8,9 @@ const Hero: React.FC = () => {
     <section className="relative min-h-[94vh] mt-16 flex flex-col justify-between ">
       {/* Background image */}
       <div className="m-2 md:m-4 relative flex flex-1">
-        <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/60 -z-10"></div>
+        <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/40 -z-10"></div>
         <Image
-          src="/main-1.jpeg"
+          src="/main.jpg"
           alt="Invest"
           fill
           priority
