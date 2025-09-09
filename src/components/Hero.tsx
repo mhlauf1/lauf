@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
           priority
           className="object-cover -z-20"
         />
-        <div className="flex flex-col w-full px-4 md:px-[6%] justify-end pt-24  md:pb-8 flex-1">
+        <div className="flex flex-col w-full px-4 md:px-[6%] justify-end pt-24 pb-4 md:pb-8 flex-1">
           <h1 className="leading-[1.05] max-w-[12ch] tracking-tight text-white lg:text-[104px] text-[clamp(3.5rem,6vw,7.375rem)]">
             Websites That Win Investors
           </h1>
@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
                   </button>
                 </Link>
               </div>
-              <div className="flex items-start mt-16 md:mt-0 flex-col gap-3">
+              <div className="flex items-start mt-12 md:mt-0 flex-col gap-3">
                 <CiGlobe size={36} className="text-neutral-100" />
                 <p className="text-neutral-100 leading-snug">
                   <b>Design and development team</b>

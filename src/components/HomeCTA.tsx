@@ -12,7 +12,7 @@ const HomeCTA = () => {
         fill
         className="inset-0 object-cover px-4 md:px-[6%] -z-50"
       />
-      <div className="flex  w-full gap-1 z-10 flex-col justify-center items-start px-[5%] py-16 md:py-24">
+      <div className="flex  w-full gap-1 z-10 flex-col justify-center items-start px-4 md:px-[5%] py-16 md:py-24">
         <p className="text-neutral-100 tracking-widest uppercase font-medium text-xs font-mono">
           Need a Website?
         </p>
@@ -24,7 +24,7 @@ const HomeCTA = () => {
         </h2>
         <div className="mt-16 md:mt-12">
           <Link href="/contact">
-            <button className="bg-white flex gap-2 font-semibold items-center py-4 px-8 rounded-full">
+            <button className="bg-white flex gap-2 font-semibold items-center py-4 px-6 md:px-8 rounded-full">
               Launch An Investor-Ready Site
               <MdArrowOutward size={20} />
             </button>

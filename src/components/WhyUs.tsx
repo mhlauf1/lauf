@@ -14,7 +14,7 @@ const WhyUs: React.FC = () => {
       {/* Layout */}
       <div className="flex gap-10 flex-col-reverse md:flex-row md:items-center items-stretch">
         {/* Left / Image */}
-        <div className="relative md:w-1/2 h-[80vh]  overflow-hidden">
+        <div className="relative md:w-1/2 md:h-[80vh]  overflow-hidden">
           {/* Maintain a pleasant aspect ratio at different breakpoints */}
           <div className="relative aspect-[4/4] md:h-full md:w-[50vw]">
             <Image
