@@ -65,14 +65,13 @@ const WhyUs: React.FC = () => {
                 </span>
               </div>
 
-              {/* Logo container scales naturally; uses intrinsic ratio via set H */}
-              <div className="relative h-6 md:h-8 w-[110px] md:w-[120px]">
+              <div className="relative">
                 <Image
-                  src="/brady-hero.svg"
-                  alt="Brady Digital Consulting"
-                  fill
-                  className="object-cover"
-                  sizes="120px"
+                  src="/brady-logo.png"
+                  alt="Hero Client Logo"
+                  width={125}
+                  height={30}
+                  className="h-auto w-auto"
                 />
               </div>
             </div>

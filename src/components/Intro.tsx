@@ -15,37 +15,41 @@ const Intro = () => {
       <span className="uppercase font-medium mt-16  tracking-widest text-xs font-mono">
         Trusted by leading companies
       </span>
-      <div className="border-b border-dashed  pb-12 md:pb-16 border-neutral-400  gap-8 md:gap-16 mt-8 flex overflow-hidden flex-row w-full md:items-center">
-        <div className="relative w-[110px] h-[28px] ">
+      <div className="border-b border-dashed  pb-12 md:pb-16 border-neutral-400  gap-8 md:gap-16 mt-8  overflow-hidden grid grid-cols-2 md:grid-cols-4 justify-center w-full md:items-center">
+        <div className="relative">
           <Image
-            src="/brady-hero.svg"
-            className=" h-auto w-auto flex "
-            fill
+            src="/brady-logo.png"
             alt="Hero Client Logo"
+            width={125}
+            height={30}
+            className="h-auto w-auto"
           />
         </div>
-        <div className="relative  w-[129px] h-[28px] ">
+        <div className="relative">
           <Image
-            src="/cadence-hero.svg"
-            className=" h-auto w-auto flex "
-            fill
+            src="/cadence-logo.png"
             alt="Hero Client Logo"
+            width={125}
+            height={30}
+            className="h-auto w-auto"
           />
         </div>
-        <div className="relative  w-[216px] h-[20px] ">
+        <div className="relative">
           <Image
-            src="/stoc-hero.svg"
-            className=" h-auto w-auto flex "
-            fill
+            src="/stoc-logo.png"
             alt="Hero Client Logo"
+            width={125}
+            height={30}
+            className="h-auto w-auto"
           />
         </div>
-        <div className="relative  w-[90px] h-[29px] ">
+        <div className="relative">
           <Image
-            src="/embark-hero.svg"
-            className=" h-auto w-auto flex "
-            fill
+            src="/embark-logo.png"
             alt="Hero Client Logo"
+            width={125}
+            height={30}
+            className="h-auto w-auto"
           />
         </div>
       </div>
@@ -61,7 +65,7 @@ const Intro = () => {
             Turn interest into action, bringing the right opportunities your
             way.
           </h2>
-          <div className="flex flex-col md:max-w-xl border-l pl-4 md:pl-6 border-dashed border-neutral-500 py-2 mt-6 mb-12 md:mb-0 md:mt-16 gap-6 md:gap-8">
+          <div className="flex flex-col md:max-w-xl md:border-b-0 border-b pb-8 md:pb-0 md:border-l pl-0 md:pl-6 border-dashed border-neutral-500 py-2 mt-6 mb-12 md:mb-0 md:mt-16 gap-6 md:gap-8">
             <p className=" text-neutral-600 text-lg md:text-xl">
               &quot;The personal attention, availability, and attention to
               detail made this a great all-around experience. We highly
@@ -75,12 +79,13 @@ const Intro = () => {
                   Cadence Private Capital
                 </span>
               </div>
-              <div className="relative  w-[115px] h-[28px] ">
+              <div className="relative">
                 <Image
-                  src="/cadence-hero.svg"
-                  className=" h-auto w-auto flex "
-                  fill
+                  src="/cadence-logo.png"
                   alt="Hero Client Logo"
+                  width={125}
+                  height={30}
+                  className="h-auto w-auto"
                 />
               </div>
             </div>
