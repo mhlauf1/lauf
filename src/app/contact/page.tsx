@@ -71,8 +71,8 @@ const ContactPage: React.FC = () => {
             </h1>
             <div className="mt-8 flex justify-center">
               <p className=" text-base md:text-xl md:max-w-[44ch] text-neutral-600">
-                We're always excited to hear about new ideas. Fill out the form,
-                and we'll be in touch shortly.
+                We&apos;re always excited to hear about new ideas. Fill out the
+                form, and we'll be in touch shortly.
               </p>
             </div>
           </div>
