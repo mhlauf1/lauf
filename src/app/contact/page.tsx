@@ -72,7 +72,7 @@ const ContactPage: React.FC = () => {
             <div className="mt-8 flex justify-center">
               <p className=" text-base md:text-xl md:max-w-[44ch] text-neutral-600">
                 We&apos;re always excited to hear about new ideas. Fill out the
-                form, and we'll be in touch shortly.
+                form, and we&apos;ll be in touch shortly.
               </p>
             </div>
           </div>
