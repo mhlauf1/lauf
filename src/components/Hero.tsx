@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
               <div className="flex items-center md:items-start mt-12 md:mt-0  gap-3">
                 <CiGlobe className="text-neutral-100 w-[32px] h-[32px] md:w-[36px] md:h-[36px]" />
                 <p className="text-neutral-100 leading-snug">
-                  <b>Design and development team</b>
+                  Design and development team
                   <br /> based in Madison, WI
                 </p>
               </div>
