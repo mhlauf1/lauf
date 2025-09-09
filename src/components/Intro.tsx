@@ -6,7 +6,7 @@ const Intro = () => {
     <section className="flex flex-col md:px-[6%] py-16 md:py-24 mx-4">
       <h2
         style={{ lineHeight: 1.15 }}
-        className="text-4xl md:text-7xl lg:text-[84px] tracking-tight text-neutral-900"
+        className="text-4xl md:text-7xl lg:text-[74px] tracking-tight text-neutral-900"
       >
         Lauf partners with financial companies and founders to design and
         develop websites that build credibility and confidence online.

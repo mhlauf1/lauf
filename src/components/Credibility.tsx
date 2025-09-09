@@ -36,7 +36,7 @@ const Credibility = () => {
           </h2>
 
           <div className="mt-6 md:mt-10 flex w-full flex-col divide-y divide-dashed divide-neutral-600">
-            <div className="flex flex-row gap-4 py-4 md:py-6 items-center md:items-start">
+            <div className="flex flex-row gap-4 py-4 items-center md:items-start">
               <BsFillLightningChargeFill
                 className="shrink-0 text-white"
                 size={24}
@@ -48,7 +48,7 @@ const Credibility = () => {
             </div>
           </div>
           <div className=" flex w-full flex-col divide-y divide-dashed divide-neutral-600">
-            <div className="flex flex-row gap-4 py-4 md:py-6 items-center md:items-start">
+            <div className="flex flex-row gap-4 py-4 items-center md:items-start">
               <TbAutomaticGearbox className="shrink-0 text-white" size={24} />
               <p className="text-neutral-300 text-lg md:text-xl">
                 <span className="text-white font-medium">
@@ -59,7 +59,7 @@ const Credibility = () => {
             </div>
           </div>
           <div className=" flex w-full flex-col divide-y divide-dashed divide-neutral-600">
-            <div className="flex flex-row gap-4 py-4 md:py-6 items-center md:items-start">
+            <div className="flex flex-row gap-4 py-4 items-center md:items-start">
               <MdLockOutline className="shrink-0 text-white" size={24} />
               <p className="text-neutral-300 text-lg md:text-xl">
                 <span className="text-white font-medium">
