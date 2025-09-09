@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-col md:flex-row w-full md:items-end justify-between mt-8">
               <div className="">
                 <Link className="" href="/contact">
-                  <button className="bg-white justify-between w-full flex gap-3 font-semibold items-center py-4 px-8 rounded-full">
+                  <button className="bg-white tracking-tight justify-between flex gap-3 font-semibold items-center py-4 px-8 rounded-full">
                     Get started
                     <MdArrowOutward size={22} />
                   </button>
@@ -46,20 +46,58 @@ const Hero: React.FC = () => {
             <div className="bg-neutral-300 w-full h-[1px] my-6 md:my-12"></div>
             <div className="hidden md:block">
               <p className="text-white">Recent Clients</p>
-              <div className="grid grid-cols-1 md:grid-cols-3 mt-2 gap-4">
-                <div className="bg-white/10 backdrop-blur rounded-md py-4 px-5 flex flex-col gap-1 justify-center">
-                  <span className="text-neutral-300">Website</span>
-                  <p className="text-white text-xl">Stoc Advisory</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur rounded-md py-4 px-5 flex flex-col gap-1 justify-center">
-                  <span className="text-neutral-300">Website</span>
-                  <p className="text-white text-xl">Cadence Private Capital</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur rounded-md py-4 px-5 flex flex-col gap-1 justify-center">
-                  <span className="text-neutral-300">Website</span>
-                  <p className="text-white text-xl">Brady Digital Consulting</p>
-                </div>
-              </div>
+              {(() => {
+                const clients = [
+                  {
+                    name: "Stoc Advisory",
+                    url: "https://www.stocadvisory.com/",
+                    tag: "Website",
+                  },
+                  {
+                    name: "Cadence Private Capital",
+                    url: "https://cadenceprivatecapital.com/",
+                    tag: "Website",
+                  },
+                  {
+                    name: "Brady Digital Consulting",
+                    url: "https://www.bradydigitalconsulting.com/",
+                    tag: "Website",
+                  },
+                ];
+
+                return (
+                  <div className="grid grid-cols-1 md:grid-cols-3 mt-2 gap-4">
+                    {clients.map((c) => (
+                      <a
+                        key={c.name}
+                        href={c.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group relative bg-white/10 backdrop-blur rounded-md py-4 px-5 flex flex-col gap-1 justify-center outline-none ring-0 focus-visible:ring-2 focus-visible:ring-white/60"
+                        aria-label={`Open ${c.name} website`}
+                        title={`Open ${c.name} website`}
+                      >
+                        <span className="text-neutral-300">{c.tag}</span>
+                        <p className="text-white text-xl pr-24">{c.name}</p>
+
+                        {/* Hover reveal on the right */}
+                        <span
+                          className="
+                pointer-events-none
+                absolute right-5 top-1/2 -translate-y-1/2
+                inline-flex items-center gap-2
+                text-white/90 text-sm font-medium tracking-tight
+                opacity-0 translate-x-1 transition-all duration-200
+                group-hover:opacity-100 group-hover:translate-x-0
+              "
+                        >
+                          View website <MdArrowOutward size={18} />
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+                );
+              })()}
             </div>
           </div>
         </div>

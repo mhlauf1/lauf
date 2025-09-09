@@ -19,7 +19,7 @@ export default function Navbar() {
         <div className="flex gap-2 md:gap-4 items-center">
           {/* Brand wordmark (inside the rule) */}
           <Link href="/" className="block">
-            <h2 className="font-black uppercase text-xl text-black tracking-tight">
+            <h2 className="font-medium  text-xl text-black tracking-tight">
               Lauf
             </h2>
           </Link>
@@ -61,9 +61,7 @@ export default function Navbar() {
           aria-label="Mobile menu"
         >
           <div className="flex items-center justify-between px-4 py-4 border-b border-neutral-100">
-            <span className="font-semibold uppercase tracking-tight text-black text-xl">
-              Lauf
-            </span>
+            <span className=" tracking-tight text-black text-xl">Lauf</span>
             <button
               type="button"
               className="inline-flex items-center justify-center rounded-md p-2 hover:bg-neutral-100"
