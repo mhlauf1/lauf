@@ -1,8 +1,6 @@
 "use client";
 import React, { useRef, useState } from "react";
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { MdArrowOutward } from "react-icons/md";
 
 // A reusable button component for this page
 const Button: React.FC<{ children: React.ReactNode; disabled?: boolean }> = ({
@@ -12,7 +10,7 @@ const Button: React.FC<{ children: React.ReactNode; disabled?: boolean }> = ({
   <button
     type="submit"
     disabled={disabled}
-    className="bg-neutral-800 text-white px-8 py-4 rounded-full font-semibold text-center hover:bg-neutral-700 transition-colors w-full md:w-auto disabled:bg-neutral-400"
+    className="bg-neutral-800 flex justify-center items-center gap-4 text-white px-8 py-4 rounded-full font-semibold text-center hover:bg-neutral-700 transition-colors w-full md:w-auto disabled:bg-neutral-400"
   >
     {children}
   </button>
@@ -28,57 +26,6 @@ const ContactPage: React.FC = () => {
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
-
-  const headlineWords = "Let's start a project".split(" ");
-  const subHeadlineLines = [
-    "We're always excited to hear about new ideas.",
-    "Fill out the form, and we'll be in touch shortly.",
-  ];
-
-  useGSAP(
-    () => {
-      // Register GSAP plugins
-      gsap.registerPlugin(ScrollTrigger);
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: container.current,
-          start: "top 80%",
-        },
-      });
-
-      // Animate headline, sub-headline, and form
-      tl.from(".contact-word", {
-        yPercent: 110,
-        stagger: 0.05,
-        duration: 0.7,
-        ease: "power2.out",
-      })
-        .from(
-          ".contact-sub-line",
-          {
-            y: 20,
-            opacity: 0,
-            stagger: 0.1,
-            duration: 0.8,
-            ease: "power2.out",
-          },
-          "-=0.5"
-        )
-        .from(
-          ".form-field",
-          {
-            y: 30,
-            opacity: 0,
-            stagger: 0.15,
-            duration: 0.7,
-            ease: "power2.out",
-          },
-          "-=0.6"
-        );
-    },
-    { scope: container }
-  );
 
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
@@ -115,25 +62,18 @@ const ContactPage: React.FC = () => {
       ref={container}
       className="bg-neutral-50 min-h-screen py-20 md:py-28"
     >
-      <div className="  px-4 md:px-12">
+      <div className="px-4 md:px-12">
         <div className="max-w-5xl mx-auto">
           {/* Header Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-5xl sm:text-5xl md:text-7xl font-light tracking-tight flex flex-wrap justify-center">
-              {headlineWords.map((word, index) => (
-                <span key={index} className="overflow-hidden py-1 mr-3">
-                  <span className="contact-word inline-block">{word}</span>
-                </span>
-              ))}
+          <div className="text-center mt-8 mb-16">
+            <h1 className="text-5xl capitalize sm:text-5xl md:text-7xl  tracking-tight flex flex-wrap justify-center">
+              Start your website project
             </h1>
-            <div className="mt-4">
-              {subHeadlineLines.map((line, index) => (
-                <div key={index} className="overflow-hidden">
-                  <p className="contact-sub-line text-base md:text-xl text-neutral-600">
-                    {line}
-                  </p>
-                </div>
-              ))}
+            <div className="mt-8 flex justify-center">
+              <p className=" text-base md:text-xl md:max-w-[44ch] text-neutral-600">
+                We're always excited to hear about new ideas. Fill out the form,
+                and we'll be in touch shortly.
+              </p>
             </div>
           </div>
 
@@ -202,9 +142,10 @@ const ContactPage: React.FC = () => {
                   className="w-full px-4 py-3 bg-white border border-neutral-300 rounded-md focus:ring-1 focus:ring-[#6a59ff] focus:outline-none transition"
                 ></textarea>
               </div>
-              <div className="form-field pt-2">
+              <div className="form-field flex items-center gap-3 pt-2">
                 <Button disabled={submitting}>
                   {submitting ? "Sending..." : "Send Message"}
+                  <MdArrowOutward size={20} />
                 </Button>
               </div>
             </form>

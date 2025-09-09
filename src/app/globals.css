@@ -31,3 +31,11 @@ body {
   display: inline-block;
   will-change: transform;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

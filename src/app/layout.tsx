@@ -1,22 +1,10 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lauf.co"),
@@ -85,32 +73,31 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <head>
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-R6KMRM4RXK"
-        ></Script>
+        />
         <Script id="google-analytics">
           {`
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-R6KMRM4RXK');
-    `}
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-R6KMRM4RXK');
+          `}
         </Script>
         <JsonLd />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} relative  overflow-x-hidden antialiased`}
+        className={[
+          "font-sans relative overflow-x-hidden antialiased bg-[#f8f9fd]",
+        ].join(" ")}
       >
         <Navbar />
-        {children}
+        <main>{children}</main>
         <Analytics />
         <Footer />
       </body>

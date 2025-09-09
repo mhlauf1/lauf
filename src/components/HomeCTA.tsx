@@ -1,43 +1,37 @@
-"use client";
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import { Button } from "./Button";
-
-// NEW: gsap pinning
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+import Image from "next/image";
+import Link from "next/link";
+import { MdArrowOutward } from "react-icons/md";
 
 const HomeCTA = () => {
-  const sectionRef = useRef<HTMLDivElement | null>(null);
-  const isInView = useInView(sectionRef, { amount: 0.5 });
-
   return (
-    <motion.section
-      ref={sectionRef}
-      // keep your color change exactly as before
-      initial={{
-        backgroundColor: "#F7F7F7",
-        color: "#282725",
-        borderTopColor: "#e5e5e5",
-      }}
-      animate={{
-        backgroundColor: isInView ? "#6a59ff" : "#F7F7F7",
-        color: isInView ? "#FFFFFF" : "#282725",
-        borderTopColor: isInView ? "#3b3a38" : "#e5e5e5",
-      }}
-      transition={{ duration: 0.6, ease: "easeInOut" }}
-      className="px-[4%] flex flex-col py-4 md:py-16"
-    >
-      <div className="flex w-full gap-1 flex-col justify-center items-center py-24">
-        <h2 className="capitalize text-center text-4xl md:text-[6vw] max-w-[16ch] md:leading-[1.2] font-light tracking-tight text-inherit">
-          Lauf helps companies stand out online
+    <section className="px-4 md:px-[6%] relative w-full h-[55vh] md:h-[65vh] flex flex-col justify-center mt-24 mb-12">
+      <div className="absolute top-0 mx-4 md:mx-[6%] left-0 right-0 bottom-0 bg-black/50 -z-20"></div>
+      <Image
+        src="/cta.jpeg"
+        alt="cta image"
+        fill
+        className="inset-0 object-cover px-4 md:px-[6%] -z-50"
+      />
+      <div className="flex  w-full gap-1 z-10 flex-col justify-center items-start px-[5%] py-16 md:py-24">
+        <p className="text-neutral-100 tracking-widest uppercase font-medium text-xs font-mono">
+          Need a Website?
+        </p>
+        <h2
+          style={{ lineHeight: 1.15 }}
+          className=" text-start mt-2 text-white capitalize tracking-tight text-4xl md:text-5xl lg:text-6xl md:max-w-[19ch]"
+        >
+          Start your project and position your firm to win more deals tomorrow.
         </h2>
-        <div className="mt-5 md:mt-12">
-          <Button href="/contact">Get started today</Button>
+        <div className="mt-16 md:mt-12">
+          <Link href="/contact">
+            <button className="bg-white flex gap-2 font-semibold items-center py-4 px-8 rounded-full">
+              Launch An Investor-Ready Site
+              <MdArrowOutward size={20} />
+            </button>
+          </Link>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 
