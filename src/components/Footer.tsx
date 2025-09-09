@@ -23,9 +23,7 @@ const Footer = () => {
         <p>Privacy Policy</p>
       </Link>
       <div className="hidden md:flex justify-center flex-1">
-        <h2 className="font-black uppercase text-lg text-black tracking-tight">
-          Lauf
-        </h2>
+        <h2 className="font-medium text-lg text-black tracking-tight">Lauf</h2>
       </div>
       <div className="flex  text-neutral-800 justify-end flex-1">
         <div className="flex flex-row items-center gap-3 md:gap-4">
